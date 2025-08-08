@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushman Das | Interactive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            background-color: #f3e7e9; /* Fallback */
+            color: #3D3D3D;
+            font-family: 'Roboto Mono', monospace;
+            cursor: none; /* Hide the default cursor */
+        }
+        .font-space-grotesk {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .section-title {
+            color: #6a5acd; /* Light Purple */
+        }
+        .tech-tag {
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: #4a5568;
+            transition: all 0.2s ease;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+        .tech-tag:hover {
+            background-color: #6a5acd;
+            color: white;
+            border-color: #6a5acd;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .hero-title, .section-title, .project-item h3, .project-item p, #about p, #experience p, #tech-stack h3, #profiles h3 {
+            cursor: none;
+        }
+        .letter {
+            display: inline-block;
+            line-height: 1em;
+            transition: transform 0.15s ease-out;
+        }
+        .initial-opacity-0 .letter {
+             opacity: 0;
+        }
+        .project-item {
+            border-left: 3px solid #C3B1E1; /* Light Purple */
+            cursor: none;
+        }
+        /* Custom Cursor Styles */
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #C3B1E1;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, border-color 0.2s, background-color 0.2s;
+            z-index: 9999;
+        }
+        .custom-cursor.grow {
+            width: 48px;
+            height: 48px;
+            border-color: #FF69B4;
+        }
+        .custom-cursor.text-hover {
+            width: 48px;
+            height: 48px;
+            border-color: #6a5acd;
+            background-color: rgba(138, 43, 226, 0.2);
+        }
+        a, button {
+            cursor: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="custom-cursor"></div>
+
+    <div class="w-full lg:flex lg:gap-12 px-6 sm:px-12 md:px-16 lg:px-24">
+        <header class="lg:sticky lg:top-0 lg:h-screen lg:w-1/3 lg:flex lg:flex-col lg:justify-between py-12 lg:py-16">
+            <div>
+                <h1 class="hero-title font-space-grotesk text-5xl font-bold mb-4 initial-opacity-0" style="color: #4A4A4A;">
+                    Ayushman Das
+                </h1>
+                <p class="animate-on-scroll text-lg text-gray-600 tracking-wider">
+                    Game Developer <span style="color: #87CEEB;">|</span> AI Developer <span style="color: #FFB6C1;">|</span> Software Engineer
+                </p>
+                <p class="animate-on-scroll mt-8 max-w-xs text-gray-500">
+                    Passionate and versatile developer creating immersive systems and robust software solutions.
+                </p>
+            </div>
+            <div id="connect" class="mt-8 lg:mt-0">
+                <div class="flex items-center space-x-6 animate-on-scroll">
+                    <a href="mailto:ayushmandas.dudul@icloud.com" class="text-gray-500 hover:text-pink-400 transition-colors duration-300">
+                        <i data-lucide="mail" class="w-7 h-7"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ayuxcyb" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-pink-400 transition-colors duration-300">
+                        <i data-lucide="linkedin" class="w-7 h-7"></i>
+                    </a>
+                    <a href="https://github.com/cyborgwastaken" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-pink-400 transition-colors duration-300">
+                        <i data-lucide="github" class="w-7 h-7"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="lg:w-2/3 lg:py-16">
+            <section id="projects" class="py-10">
+                <h2 class="font-space-grotesk text-4xl md:text-5xl font-bold mb-16 section-title animate-on-scroll">
+                    Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">ArxCy Language</h3>
+                        <p class="text-gray-600">Designed a statically-typed compiled language in C++ that reduced code verbosity by 35% and achieved 40% faster compile times with LLVM IR.</p>
+                    </div>
+                     <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">PersonaFi AI Assistant</h3>
+                        <p class="text-gray-600">Built an agentic AI finance planner with LangChain and Firebase, improving output latency by 3x through parallelized logic.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">X-Cope: VR FPS</h3>
+                        <p class="text-gray-600">An immersive VR shooter with room-scale interaction, implementing GAS-based ability combos with a reduced latency of 18ms.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">DRAD-MS & BLADE</h3>
+                        <p class="text-gray-600">DRDO internship projects. Developed inventory software with 99.7% data accuracy and a tank shell drag simulation that improved accuracy by 67%.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">ChronoVault</h3>
+                        <p class="text-gray-600">A blockchain-based time-locked vault with emotional, time, and geo triggers. Lowered gas deployment by 22% through Solidity optimization.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">CyniX</h3>
+                        <p class="text-gray-600">A personal AI assistant powered by the Gemini API and hosted on Google Cloud, capable of various conversational and task-oriented functions.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">Pew Pew Waves</h3>
+                        <p class="text-gray-600">A dynamic 3D wave-based shooter game developed using the Unity engine, focused on core gameplay loops.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">ArxFlix</h3>
+                        <p class="text-gray-600">A watch party website built with a MERN stack, leveraging Google Cloud to provide a real-time, shared streaming experience.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">Procedural City Generator</h3>
+                        <p class="text-gray-600">A procedural generation tool developed in Unity that automatically creates vast and unique cityscapes.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">InputBuilder</h3>
+                        <p class="text-gray-600">A Python script with a GUI for generating input files for the GAMESS quantum chemistry software.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">Face-body-detection suite</h3>
+                        <p class="text-gray-600">A computer vision suite utilizing MediaPipe, OpenCV, and Haar Cascades for real-time face and body detection.</p>
+                    </div>
+                     <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">CurriDB</h3>
+                        <p class="text-gray-600">Custom curriculum tracking software developed using C# and WPF, with a SQL backend for data management.</p>
+                    </div>
+                    <div class="project-item pl-6 animate-on-scroll">
+                        <h3 class="font-space-grotesk text-2xl font-bold mb-2">AI Plays Games</h3>
+                        <p class="text-gray-600">An AI agent trained with PyTorch to play classic games like Chess, Snake, and FlappyBird using Reinforcement Learning.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="py-10">
+                <div class="animate-on-scroll">
+                    <h2 class="font-space-grotesk text-4xl md:text-5xl font-bold mb-8 section-title">About Me</h2>
+                    <div class="text-lg text-gray-600 leading-relaxed space-y-4">
+                        <p>My expertise lies in architecting large-scale game systems, designing custom programming languages, and developing agentic AI systems that solve complex problems. I thrive on the unique challenge of blending creative game design with rigorous software engineering and intelligent data-driven features, aiming to push the boundaries of interactive experiences.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="py-10">
+                <h2 class="font-space-grotesk text-4xl md:text-5xl font-bold mb-16 section-title animate-on-scroll">
+                    Experience
+                </h2>
+                <div class="max-w-3xl">
+                    <div class="flex items-start mb-12 animate-on-scroll">
+                        <div class="flex flex-col items-center mr-6 pt-1">
+                            <div class="flex-shrink-0 w-6 h-6 bg-purple-300 rounded-full border-4 border-white"></div>
+                            <div class="w-0.5 flex-grow bg-purple-200 mt-2"></div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-pink-400 text-sm font-semibold">May 2025 - June 2025</p>
+                            <h3 class="font-space-grotesk text-2xl font-bold mt-1">Intern | DRDO</h3>
+                            <p class="mt-2 text-gray-600">Engineered inventory and simulation software, reducing infrastructure provisioning time by 60% and improving developer velocity.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start animate-on-scroll">
+                        <div class="flex flex-col items-center mr-6 pt-1">
+                            <div class="flex-shrink-0 w-6 h-6 bg-purple-300 rounded-full border-4 border-white"></div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-pink-400 text-sm font-semibold">March 2024 - May 2024</p>
+                            <h3 class="font-space-grotesk text-2xl font-bold mt-1">Project Assistant | DST</h3>
+                            <p class="mt-2 text-gray-600">Engineered a high-performance molecular renderer using PyMOL and OpenGL, improving rendering speed by 40%.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tech-stack" class="py-10">
+                <h2 class="font-space-grotesk text-4xl md:text-5xl font-bold mb-16 section-title animate-on-scroll">
+                    Tech Stack
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="animate-on-scroll">
+                        <h3 class="font-space-grotesk text-xl font-bold mb-4">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Java</span><span class="tech-tag">C</span><span class="tech-tag">C++</span><span class="tech-tag">C#</span><span class="tech-tag">Python</span><span class="tech-tag">Go</span><span class="tech-tag">Swift</span><span class="tech-tag">Rust</span>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h3 class="font-space-grotesk text-xl font-bold mb-4">Core Concepts</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">OS</span><span class="tech-tag">DSA</span><span class="tech-tag">Algorithms</span><span class="tech-tag">Git</span>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h3 class="font-space-grotesk text-xl font-bold mb-4">Game Development</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Unreal</span><span class="tech-tag">Unity</span><span class="tech-tag">GAS</span><span class="tech-tag">Chaos</span><span class="tech-tag">Nanite</span><span class="tech-tag">DOTS</span>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h3 class="font-space-grotesk text-xl font-bold mb-4">Graphics & XR</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">OpenGL</span><span class="tech-tag">Ray Tracing</span><span class="tech-tag">MetaXR</span><span class="tech-tag">ARKit</span><span class="tech-tag">ARCore</span>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h3 class="font-space-grotesk text-xl font-bold mb-4">AI/ML</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">PyTorch</span><span class="tech-tag">LangChain</span><span class="tech-tag">Hugging Face</span><span class="tech-tag">OpenCV</span><span class="tech-tag">RL</span>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <h3 class="font-space-grotesk text-xl font-bold mb-4">Web & Cloud</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">Firebase</span><span class="tech-tag">AWS</span><span class="tech-tag">Docker</span><span class="tech-tag">GCP</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<section id="profiles" class="py-10">
+  <h2 class="font-space-grotesk text-4xl md:text-5xl font-bold mb-16 section-title animate-on-scroll">
+    Code Profiles
+  </h2>
+
+  <div class="flex flex-wrap justify-center items-stretch gap-8">
+    
+    <!-- GitHub Stats -->
+    <div class="animate-on-scroll w-full sm:w-[32%] max-w-[400px]">
+      <div class="bg-white rounded-lg overflow-hidden aspect-[2/1] flex items-center justify-center">
+        <img 
+          src="https://github-readme-stats.vercel.app/api?username=cyborgwastaken&show_icons=true&theme=buefy&bg_color=#101010&border_color=C3B1E1&text_color=4A4A4A&title_color=6a5acd" 
+          alt="GitHub Stats" 
+          class="w-full h-auto object-contain" 
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </div>
+
+    <!-- Top Languages -->
+    <div class="animate-on-scroll w-full sm:w-[32%] max-w-[400px]">
+      <div class="bg-white rounded-lg overflow-hidden aspect-[2/1] flex items-center justify-center">
+        <img 
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=cyborgwastaken&layout=compact&theme=buefy&bg_color=#101010&border_color=C3B1E1&text_color=4A4A4A&title_color=6a5acd" 
+          alt="Top Languages" 
+          class="w-full h-auto object-contain" 
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </div>
+
+    <!-- LeetCode Card -->
+    <div class="animate-on-scroll w-full sm:w-[32%] max-w-[400px]">
+      <div class="bg-white rounded-lg overflow-hidden aspect-[2/1] flex items-center justify-center">
+        <img 
+          src="https://leetcard.jacoblin.cool/cyborgwastaken?theme=light&font=Roboto%20Mono" 
+          alt="LeetCode Card" 
+          class="w-full h-auto object-contain" 
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+            <footer class="text-left py-10">    
+                <p class="text-gray-500 text-sm animate-on-scroll">Built with passion, a soft aesthetic, and a touch of interactive magic. Coded with HTML, Tailwind CSS, and Anime.js.</p>
+            </footer>
+        </main>
+    </div>
+    
+    <script>
+        lucide.createIcons();
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.querySelector('.custom-cursor');
+
+            window.addEventListener('mousemove', e => {
+                cursor.style.top = e.clientY + 'px';
+                cursor.style.left = e.clientX + 'px';
+            });
+
+            const interactiveElements = document.querySelectorAll('a, button, .project-item, .tech-tag');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
+            });
+
+            function applyTextHover(selector, scale = 1.1) {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach(el => {
+                    if (el.dataset.lettersWrapped) return;
+                    
+                    const isInitialOpacityZero = el.classList.contains('initial-opacity-0');
+                    el.innerHTML = el.textContent.replace(/\S/g, `<span class='letter' ${isInitialOpacityZero ? '' : "style='opacity: 1;'"}>$&</span>`);
+                    el.dataset.lettersWrapped = true;
+
+                    el.addEventListener('mouseenter', () => cursor.classList.add('text-hover'));
+                    el.addEventListener('mouseleave', () => cursor.classList.remove('text-hover'));
+
+                    el.addEventListener('mouseover', (e) => {
+                        if (e.target.classList.contains('letter')) {
+                            anime.remove(e.target);
+                            anime({
+                                targets: e.target,
+                                scale: scale,
+                                duration: 200,
+                                easing: 'easeOutQuad'
+                            });
+                        }
+                    });
+
+                    el.addEventListener('mouseout', (e) => {
+                        if (e.target.classList.contains('letter')) {
+                            anime.remove(e.target);
+                            anime({
+                                targets: e.target,
+                                scale: 1,
+                                duration: 200,
+                                easing: 'easeOutQuad'
+                            });
+                        }
+                    });
+                });
+            }
+            
+            applyTextHover('.hero-title', 1.4);
+            applyTextHover('.section-title', 1.2);
+            applyTextHover('.project-item h3', 1.15);
+            applyTextHover('.project-item p', 1.05);
+            applyTextHover('#about p', 1.05);
+            applyTextHover('#experience h3', 1.15);
+            applyTextHover('#experience p', 1.05);
+            applyTextHover('#tech-stack h3', 1.15);
+            applyTextHover('#connect p', 1.05);
+
+            anime.timeline({loop: false})
+                .add({
+                    targets: '.hero-title .letter',
+                    translateY: [100,0],
+                    translateZ: 0,
+                    opacity: [0,1],
+                    easing: "easeOutExpo",
+                    duration: 1400,
+                    delay: (el, i) => 300 + 30 * i
+                });
+
+            document.querySelectorAll('.project-item').forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    anime({
+                        targets: item,
+                        translateX: 5,
+                        borderLeftColor: '#FF69B4',
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    anime({
+                        targets: item,
+                        translateX: 0,
+                        borderLeftColor: '#C3B1E1',
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        anime({
+                            targets: entry.target,
+                            translateY: [30, 0],
+                            opacity: [0, 1],
+                            duration: 800,
+                            easing: 'easeOutExpo',
+                            delay: anime.stagger(100, {start: parseFloat(entry.target.style.animationDelay) || 0})
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
