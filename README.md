@@ -160,5 +160,6 @@ A Blockchain-based Time-Locked Vault
 - 📧 **Email:** ayushmandas.dudul@icloud.com
 - 💼 **LinkedIn:** [linkedin.com/in/ayuxcyb](https://linkedin.com/in/ayuxcyb)
 - 🌐 **GitHub:** [github.com/cyborgwastaken](https://github.com/cyborgwastaken)
+- 🧑🏻‍💼 **Portfolio**[cyborgwastaken.github.io/cyborgwastaken/](https://cyborgwastaken.github.io/cyborgwastaken/)
 
 ⚡ Actively seeking internship opportunities in Software Development Engineering and the Gaming/AI/SDE sectors to further leverage my skills and contribute to cutting-edge projects!
