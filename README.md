@@ -52,7 +52,7 @@ My skills in blockchain technology allow me to develop decentralized application
 ## 🎯 Featured Projects
 
 ### 💻 ArxCy Programming Language
-A C++-based programming language
+A C++ based programming language
 > I designed a statically-typed compiled language that reduced code verbosity by 35%. By optimizing the backend with LLVM IR, I achieved 40% faster compile times. This project also maintained over 85% unit test coverage across more than 2000 lines of code.
 
 ### 🌐 PersonaFi AI Assistant
@@ -69,7 +69,7 @@ DRDO Internship Projects
 
 ### 🔒 ChronoVault
 A Blockchain-based Time-Locked Vault
-> This project features time-locked encrypted messages based on emotional, time, and geo triggers. I lowered the gas deployment by 22% through Solidity bytecode optimization.
+> This project features time-locked encrypted messages based on emotional, time, and geo triggers.
 
 ---
 
