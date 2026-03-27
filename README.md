@@ -7,7 +7,7 @@ I am a passionate and versatile developer with a unique background at the inters
 
 ## 🔥 About Me
 
-- 🎓 I am pursuing a **B.Tech in CSE - Gaming Technology** at VIT Bhopal University (Class of '27), where I have an **8.8 CGPA**. This program provides a deep dive into game engine architecture, graphics programming, and advanced game design principles.
+- 🎓 I am pursuing a **B.Tech in CSE - Gaming Technology** at VIT Bhopal University (Class of '27), where I have an **8.7 CGPA**. This program provides a deep dive into game engine architecture, graphics programming, and advanced game design principles.
 - 🎓 Concurrently, I am pursuing a **BS in Data Science and Applications** at IIT Madras (Class of '28), where I am honing my skills in data analysis, machine learning algorithms, and statistical modeling to build intelligent systems.
 - 🧠 My expertise lies in architecting large-scale game systems, designing custom programming languages, and developing agentic AI systems that can solve complex problems.
 
