@@ -39,13 +39,13 @@ I apply my knowledge of machine learning to create intelligent and data-driven s
 ### Web & Cloud Technologies
 I possess full-stack development skills to build scalable web applications. My experience includes front-end frameworks, back-end runtimes, and a strong understanding of cloud infrastructure for deployment and management.
 
-- **WebDev :** React, Node.js, Firebase
+- **WebDev :** React, Node.js, Next.js, Firebase, Supabase, Stripe Integration
 - **Cloud & DevOps :** AWS, Docker, GCP, Kubernetes
 
 ### Blockchain
 My skills in blockchain technology allow me to develop decentralized applications and smart contracts. This includes proficiency in key platforms and libraries for web3 development.
 
-- **Technologies :** Solidity, Web3.js, MetaMask
+- **Technologies :** Solidity, Web3.js, MetaMask, Phantom
 
 ---
 
