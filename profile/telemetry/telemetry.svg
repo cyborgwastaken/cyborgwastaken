@@ -37,17 +37,17 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 </style>
 <text x="36" y="70" class="prompt" opacity="0">$<set attributeName="opacity" to="1" begin="0.20s" fill="freeze"/></text>
 <clipPath id="tp"><rect x="52" y="56" width="0" height="20"><animate attributeName="width" values="0.0;7.8;15.6;23.4;31.2;39.0;46.8;54.6;62.4;70.2;78.0;85.8;93.6;101.4;109.2;117.0;124.8;132.6;140.4;148.2" begin="0.25s" dur="0.47s" calcMode="discrete" fill="freeze"/></rect></clipPath><text x="52" y="70" clip-path="url(#tp)">gh telemetry --live</text>
-<text x="223.6" y="70" class="dim" opacity="0"># cyborgwastaken + arx-studios · refreshed 10 Oct 2026<set attributeName="opacity" to="1" begin="0.72s" fill="freeze"/></text>
+<text x="223.6" y="70" class="dim" opacity="0"># cyborgwastaken + arx-studios · refreshed 09 Oct 2026<set attributeName="opacity" to="1" begin="0.72s" fill="freeze"/></text>
 <circle cx="840" cy="66" r="4.5" fill="#22c55e" class="pulse"/>
 <g transform="translate(0 46)">
 <rect x="20.0" y="60" width="199.5" height="78" rx="9" fill="#0f141c" stroke="#1e293b"/>
 <text x="36.0" y="82" class="k">CONTRIBUTIONS</text>
-<text x="36.0" y="113" class="v">179</text>
+<text x="36.0" y="113" class="v">172</text>
 <text x="36.0" y="129" class="u">last 12 months</text>
 <rect x="233.5" y="60" width="199.5" height="78" rx="9" fill="#0f141c" stroke="#1e293b"/>
 <text x="249.5" y="82" class="k">CURRENT STREAK</text>
-<text x="249.5" y="113" class="v">2</text>
-<text x="249.5" y="129" class="u">days · best 4</text>
+<text x="249.5" y="113" class="v">1</text>
+<text x="249.5" y="129" class="u">days · best 6</text>
 <rect x="447.0" y="60" width="199.5" height="78" rx="9" fill="#0f141c" stroke="#1e293b"/>
 <text x="463.0" y="82" class="k">PUBLIC REPOS</text>
 <text x="463.0" y="113" class="v">28</text>
@@ -184,11 +184,11 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <rect class="cell" style="animation-delay:0.306s" x="299.0" y="248" width="12" height="12" rx="2.5" fill="#111827"><title>2026-02-07: 0</title></rect>
 <rect class="cell" style="animation-delay:0.324s" x="314.0" y="158" width="12" height="12" rx="2.5" fill="#111827"><title>2026-02-08: 0</title></rect>
 <rect class="cell" style="animation-delay:0.324s" x="314.0" y="173" width="12" height="12" rx="2.5" fill="#111827"><title>2026-02-09: 0</title></rect>
-<rect class="cell" style="animation-delay:0.324s" x="314.0" y="188" width="12" height="12" rx="2.5" fill="#111827"><title>2026-02-10: 0</title></rect>
-<rect class="cell" style="animation-delay:0.324s" x="314.0" y="203" width="12" height="12" rx="2.5" fill="#06b6d4"><title>2026-02-11: 11</title></rect>
+<rect class="cell" style="animation-delay:0.324s" x="314.0" y="188" width="12" height="12" rx="2.5" fill="#083344"><title>2026-02-10: 1</title></rect>
+<rect class="cell" style="animation-delay:0.324s" x="314.0" y="203" width="12" height="12" rx="2.5" fill="#06b6d4"><title>2026-02-11: 10</title></rect>
 <rect class="cell" style="animation-delay:0.324s" x="314.0" y="218" width="12" height="12" rx="2.5" fill="#06b6d4"><title>2026-02-12: 12</title></rect>
-<rect class="cell" style="animation-delay:0.324s" x="314.0" y="233" width="12" height="12" rx="2.5" fill="#083344"><title>2026-02-13: 2</title></rect>
-<rect class="cell" style="animation-delay:0.324s" x="314.0" y="248" width="12" height="12" rx="2.5" fill="#06b6d4"><title>2026-02-14: 12</title></rect>
+<rect class="cell" style="animation-delay:0.324s" x="314.0" y="233" width="12" height="12" rx="2.5" fill="#083344"><title>2026-02-13: 3</title></rect>
+<rect class="cell" style="animation-delay:0.324s" x="314.0" y="248" width="12" height="12" rx="2.5" fill="#06b6d4"><title>2026-02-14: 11</title></rect>
 <rect class="cell" style="animation-delay:0.342s" x="329.0" y="158" width="12" height="12" rx="2.5" fill="#111827"><title>2026-02-15: 0</title></rect>
 <rect class="cell" style="animation-delay:0.342s" x="329.0" y="173" width="12" height="12" rx="2.5" fill="#111827"><title>2026-02-16: 0</title></rect>
 <rect class="cell" style="animation-delay:0.342s" x="329.0" y="188" width="12" height="12" rx="2.5" fill="#111827"><title>2026-02-17: 0</title></rect>
@@ -232,8 +232,8 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <rect class="cell" style="animation-delay:0.432s" x="404.0" y="233" width="12" height="12" rx="2.5" fill="#111827"><title>2026-03-27: 0</title></rect>
 <rect class="cell" style="animation-delay:0.432s" x="404.0" y="248" width="12" height="12" rx="2.5" fill="#111827"><title>2026-03-28: 0</title></rect>
 <rect class="cell" style="animation-delay:0.450s" x="419.0" y="158" width="12" height="12" rx="2.5" fill="#111827"><title>2026-03-29: 0</title></rect>
-<rect class="cell" style="animation-delay:0.450s" x="419.0" y="173" width="12" height="12" rx="2.5" fill="#083344"><title>2026-03-30: 4</title></rect>
-<rect class="cell" style="animation-delay:0.450s" x="419.0" y="188" width="12" height="12" rx="2.5" fill="#083344"><title>2026-03-31: 3</title></rect>
+<rect class="cell" style="animation-delay:0.450s" x="419.0" y="173" width="12" height="12" rx="2.5" fill="#0e7490"><title>2026-03-30: 5</title></rect>
+<rect class="cell" style="animation-delay:0.450s" x="419.0" y="188" width="12" height="12" rx="2.5" fill="#083344"><title>2026-03-31: 2</title></rect>
 <rect class="cell" style="animation-delay:0.450s" x="419.0" y="203" width="12" height="12" rx="2.5" fill="#111827"><title>2026-04-01: 0</title></rect>
 <rect class="cell" style="animation-delay:0.450s" x="419.0" y="218" width="12" height="12" rx="2.5" fill="#111827"><title>2026-04-02: 0</title></rect>
 <rect class="cell" style="animation-delay:0.450s" x="419.0" y="233" width="12" height="12" rx="2.5" fill="#111827"><title>2026-04-03: 0</title></rect>
@@ -369,8 +369,8 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <rect class="cell" style="animation-delay:0.792s" x="704.0" y="188" width="12" height="12" rx="2.5" fill="#0e7490"><title>2026-08-11: 7</title></rect>
 <rect class="cell" style="animation-delay:0.792s" x="704.0" y="203" width="12" height="12" rx="2.5" fill="#083344"><title>2026-08-12: 2</title></rect>
 <rect class="cell" style="animation-delay:0.792s" x="704.0" y="218" width="12" height="12" rx="2.5" fill="#083344"><title>2026-08-13: 1</title></rect>
-<rect class="cell" style="animation-delay:0.792s" x="704.0" y="233" width="12" height="12" rx="2.5" fill="#111827"><title>2026-08-14: 0</title></rect>
-<rect class="cell" style="animation-delay:0.792s" x="704.0" y="248" width="12" height="12" rx="2.5" fill="#0e7490"><title>2026-08-15: 6</title></rect>
+<rect class="cell" style="animation-delay:0.792s" x="704.0" y="233" width="12" height="12" rx="2.5" fill="#083344"><title>2026-08-14: 3</title></rect>
+<rect class="cell" style="animation-delay:0.792s" x="704.0" y="248" width="12" height="12" rx="2.5" fill="#083344"><title>2026-08-15: 3</title></rect>
 <rect class="cell" style="animation-delay:0.810s" x="719.0" y="158" width="12" height="12" rx="2.5" fill="#111827"><title>2026-08-16: 0</title></rect>
 <rect class="cell" style="animation-delay:0.810s" x="719.0" y="173" width="12" height="12" rx="2.5" fill="#111827"><title>2026-08-17: 0</title></rect>
 <rect class="cell" style="animation-delay:0.810s" x="719.0" y="188" width="12" height="12" rx="2.5" fill="#111827"><title>2026-08-18: 0</title></rect>
@@ -426,23 +426,22 @@ text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Libera
 <rect class="cell" style="animation-delay:0.936s" x="824.0" y="203" width="12" height="12" rx="2.5" fill="#111827"><title>2026-10-07: 0</title></rect>
 <rect class="cell" style="animation-delay:0.936s" x="824.0" y="218" width="12" height="12" rx="2.5" fill="#111827"><title>2026-10-08: 0</title></rect>
 <rect class="cell" style="animation-delay:0.936s" x="824.0" y="233" width="12" height="12" rx="2.5" fill="#083344"><title>2026-10-09: 3</title></rect>
-<rect class="cell" style="animation-delay:0.936s" x="824.0" y="248" width="12" height="12" rx="2.5" fill="#0e7490"><title>2026-10-10: 7</title></rect>
 <clipPath id="barclip"><rect x="20" y="281" width="840" height="8" rx="4"/></clipPath>
 <g clip-path="url(#barclip)"><g class="bar">
-<rect x="20.0" y="281" width="257.5" height="8" fill="#f1e05a"/>
-<rect x="277.0" y="281" width="213.5" height="8" fill="#3178c6"/>
-<rect x="490.0" y="281" width="135.8" height="8" fill="#3572A5"/>
-<rect x="625.3" y="281" width="78.1" height="8" fill="#dea584"/>
-<rect x="703.0" y="281" width="54.3" height="8" fill="#f34b7d"/>
-<rect x="756.8" y="281" width="54.1" height="8" fill="#663399"/>
-<rect x="810.4" y="281" width="50.1" height="8" fill="#7355dd"/>
+<rect x="20.0" y="281" width="256.6" height="8" fill="#f1e05a"/>
+<rect x="276.1" y="281" width="212.8" height="8" fill="#3178c6"/>
+<rect x="488.4" y="281" width="138.2" height="8" fill="#3572A5"/>
+<rect x="626.1" y="281" width="77.9" height="8" fill="#dea584"/>
+<rect x="703.5" y="281" width="54.1" height="8" fill="#f34b7d"/>
+<rect x="757.1" y="281" width="53.9" height="8" fill="#663399"/>
+<rect x="810.6" y="281" width="49.9" height="8" fill="#7355dd"/>
 </g></g>
 <circle cx="25" cy="305" r="4.5" fill="#f1e05a"/>
-<text x="35" y="309" class="lg">JavaScript 30.6%</text>
+<text x="35" y="309" class="lg">JavaScript 30.5%</text>
 <circle cx="175.6" cy="305" r="4.5" fill="#3178c6"/>
-<text x="185.6" y="309" class="lg">TypeScript 25.4%</text>
+<text x="185.6" y="309" class="lg">TypeScript 25.3%</text>
 <circle cx="326.2" cy="305" r="4.5" fill="#3572A5"/>
-<text x="336.2" y="309" class="lg">Python 16.1%</text>
+<text x="336.2" y="309" class="lg">Python 16.4%</text>
 <circle cx="448.4" cy="305" r="4.5" fill="#dea584"/>
 <text x="458.4" y="309" class="lg">Rust 9.2%</text>
 <circle cx="549.3" cy="305" r="4.5" fill="#f34b7d"/>
