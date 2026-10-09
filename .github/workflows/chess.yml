@@ -29,7 +29,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq stockfish
-          pip install --quiet python-chess==1.11.2
+          pip install --quiet chess==1.11.2
 
       - name: Play the move
         env:
