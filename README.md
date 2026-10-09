@@ -1,14 +1,4 @@
-<!-- ─────────────────────────────  HEADER  ───────────────────────────── -->
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,55:0e7490,100:22d3ee&height=220&section=header&text=Ayushman%20Das&fontSize=64&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=backend%20%C2%B7%20platform%20reliability%20%C2%B7%20founder%20%40%20arx%20studios&descSize=17&descAlignY=58" alt="Ayushman Das" width="100%" />
-</p>
-
-<p align="center">
-  <a href="https://ayuxcyb.fun">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3200&pause=900&color=22D3EE&center=true&vCenter=true&width=720&lines=%24+whoami+%E2%86%92+cyborgwastaken;I+keep+production+boring+so+the+product+can+be+exciting.;Prometheus+%C2%B7+tracing+%C2%B7+structured+logs+%C2%B7+alerting;Compilers%2C+game+engines%2C+Web3+vaults%2C+multi-agent+AI;p99+latency+is+a+personality+trait." alt="typing intro" />
-  </a>
-</p>
+<a href="https://ayuxcyb.fun"><img src="profile/hero/hero.svg" width="100%" alt="Ayushman Das — backend & platform reliability engineer, founder @ Arx Studios" /></a>
 
 <p align="center">
   <a href="https://ayuxcyb.fun"><img src="https://img.shields.io/badge/ayuxcyb.fun-portfolio-22d3ee?style=flat&logo=vercel&logoColor=white&labelColor=0d1117" height="28" alt="Portfolio" /></a>
@@ -18,76 +8,114 @@
   <a href="https://www.instagram.com/cyborgwastaken/"><img src="https://img.shields.io/badge/Instagram-cyborgwastaken-e4405f?style=flat&logo=instagram&logoColor=white&labelColor=0d1117" height="28" alt="Instagram" /></a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/status-all%20systems%20operational-22c55e?style=flat&labelColor=0d1117" alt="status" />
-  <img src="https://img.shields.io/badge/region-ap--south%20%C2%B7%20Bhubaneswar%2C%20IN-22d3ee?style=flat&labelColor=0d1117" alt="region" />
-  <img src="https://komarev.com/ghpvc/?username=cyborgwastaken&color=0e7490&style=flat&label=requests%20served" alt="profile views" />
-</p>
+I keep production boring so the product can be exciting. By day I build observability and reliability tooling for a live
+cybersecurity GRC platform at **[Cyberpal.ai](https://ayuxcyb.fun/about)**: metrics, tracing, alerting, the works. After hours I run
+**[Arx Studios](https://github.com/arx-studios)**, where I write compilers, ship web products and build games.
+
+This README is a little production system too. The board below is live, the stats redraw themselves every night, and the map
+and diagrams are interactive. Go ahead and poke at it.
 
 <br />
 
-<!-- ─────────────────────────────  SERVICE STATUS  ───────────────────────────── -->
+## Play chess against my README
 
-```console
-$ systemctl status ayushman.service
+Anyone can play. Pick a move, submit the issue it opens, and a GitHub Action plays it, lets Stockfish answer and redraws this
+board, usually in under a minute.
 
-● ayushman.service - Backend & Platform Reliability Engineer
-     Loaded: loaded (/asia/india/odisha/bhubaneswar; enabled; vendor preset: caffeinated)
-     Active: active (running) since 2023 — B.Tech CS&E @ VIT Bhopal · CGPA 8.80
-             + BS Data Science & Applications @ IIT Madras (online, parallel)
-       Docs: https://ayuxcyb.fun
-   Main PID: 1 (ayushman)
-     Memory: Java · Python · Go · Rust · PostgreSQL
-     CGroup: /arx-studios.slice
-             ├─ backend   Node.js · Express · Socket.IO · FastAPI · Supabase · Redis
-             ├─ platform  Prometheus · Pino · Docker · Kubernetes · AWS · GCP
-             ├─ systems   Rust · LLVM · ANTLR4 · C++17
-             └─ gamedev   Unity 6 (URP/HDRP) · Unreal Engine
+<!--CHESS:START-->
+<p align="center"><img src="profile/chess/board.svg?v=1-0" width="440" alt="current chess board"></p>
 
-Feb 2026  ayushman[cyberpal.ai]: Software Development Intern @ Technology Crest Corporation
-Feb 2026  ayushman[cyberpal.ai]:   built an observability console streaming live stdout/stderr over WebSockets
-Feb 2026  ayushman[cyberpal.ai]:   instrumented Prometheus + Pino; alerts on heap, event-loop lag, error rate, p99
-Feb 2026  ayushman[cyberpal.ai]:   distributed tracing w/ correlation IDs, automatic secret redaction in logs
-May 2025  ayushman[drdo-pxe]:    R&D Intern, Defence Research & Development Organisation
-May 2025  ayushman[drdo-pxe]:      shipped DRAD-MS + BLADEngine inside a secure, access-controlled environment
-May 2024  ayushman[vit-serb]:    Project Assistant, DST-SERB CRG research project
-May 2024  ayushman[vit-serb]:      PyMOL/OpenGL molecular viz for Gaussian · GAMESS · NWChem · MOPAC
-```
+<p align="center"><b>Game #1 · move 1 · you're White, your move.</b><br />
+<sub>Stockfish (skill 4/20) plays Black and replies instantly.</sub></p>
 
-<!-- ─────────────────────────────  GOLDEN SIGNALS  ───────────────────────────── -->
+<details>
+<summary><b>♟️ Make a move</b>: 20 legal moves. Click one, then hit <i>Submit new issue</i>.</summary>
+<br />
 
-### 📈 The four golden signals
+| Piece | Moves |
+|---|---|
+| ♙ Pawn on `a2` | [`a3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Ca2a3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`a4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Ca2a4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♙ Pawn on `b2` | [`b3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cb2b3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`b4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cb2b4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♙ Pawn on `c2` | [`c3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cc2c3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`c4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cc2c4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♙ Pawn on `d2` | [`d3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cd2d3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`d4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cd2d4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♙ Pawn on `e2` | [`e3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Ce2e3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`e4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Ce2e4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♙ Pawn on `f2` | [`f3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cf2f3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`f4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cf2f4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♙ Pawn on `g2` | [`g3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cg2g3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`g4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cg2g4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♙ Pawn on `h2` | [`h3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Ch2h3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`h4`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Ch2h4&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♘ Knight on `b1` | [`Na3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cb1a3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`Nc3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cb1c3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
+| ♘ Knight on `g1` | [`Nf3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cg1f3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) · [`Nh3`](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cmove%7Cg1h3&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.) |
 
-<table>
-  <tr>
-    <td width="25%" align="center"><b>⏱️ Latency</b><br /><sub>idea → <code>git init</code></sub><br /><br /><b>&lt; 24h</b></td>
-    <td width="25%" align="center"><b>📦 Traffic</b><br /><sub>repos shipped</sub><br /><br /><b>30+</b><br /><sub>personal + Arx Studios</sub></td>
-    <td width="25%" align="center"><b>🚨 Errors</b><br /><sub>caught before users notice</sub><br /><br /><b>that's the job</b></td>
-    <td width="25%" align="center"><b>🔥 Saturation</b><br /><sub>current load</sub><br /><br /><b>final year · internship<br />capstone · a studio</b></td>
-  </tr>
-</table>
+<sub>Game stuck or lost? [Start a new game](https://github.com/cyborgwastaken/cyborgwastaken/issues/new?title=chess%7Cnew&body=Just%20press%20%2A%2ASubmit%20new%20issue%2A%2A.%20The%20game%20updates%20automatically%20within%20a%20minute%20or%20so.).</sub>
+</details>
 
-<!-- ─────────────────────────────  DEPLOYMENTS  ───────────────────────────── -->
+| 🏆 Visitors vs Stockfish | 🕹️ Latest moves | 👑 Most moves played |
+|:-:|:-:|:-:|
+| **0** wins · **0** losses · **0** draws | _nobody yet, be the first_ | _empty, claim the top spot_ |
+<!--CHESS:END-->
 
-### 🛰️ Deployments
+<br />
 
-<sub>🟢 live in production &nbsp;·&nbsp; 🔵 shipped &nbsp;·&nbsp; 🟡 in active development</sub>
+## Deployments
+
+<sub>🟢 live in production &nbsp;·&nbsp; 🔵 shipped &nbsp;·&nbsp; 🟡 in active development &nbsp;·&nbsp; 🏆 hackathon finalist</sub>
 
 #### Web, backend & infrastructure
 
 | | Service | What it does | Stack |
 |:-:|---|---|---|
-| 🟢 | **[AXL](https://axl.arxstudios.pro)** | URL shortener with Redis cache-aside redirects, batched click counting, per-user links and rate limiting | `Next.js` `Supabase` `Redis` |
-| 🟢 | **[ChronoVault](https://chronovault-psi.vercel.app)** | AES-256-GCM encrypted files, sharded onto IPFS, verified by Merkle roots on Ethereum; time/geo locks and a face-biometric gate. Four versions deep. | `React` `IPFS` `Ethereum` `FaceNet` |
-| 🟢 | **[Arx Killfeed](https://arx-killfeed.vercel.app)** | Cinematic, scroll-driven Valorant codex generated statically from a local data pipeline | `Next.js` `GSAP` `Lenis` |
+| 🟢 | **[AXL](https://axl.arxstudios.pro)** | URL shortener: Redis cache-aside redirects, batched click counting, per-user links, rate limiting | `Next.js` `Supabase` `Redis` |
+| 🟢 | **[ChronoVault](https://chronovault-psi.vercel.app)** | Files encrypted with AES-256-GCM, sharded onto IPFS, verified by Merkle roots on Ethereum; time/geo locks and a face-biometric gate. Four versions deep. | `React` `IPFS` `Ethereum` `FaceNet` |
+| 🟢 | **[Arx Killfeed](https://arx-killfeed.vercel.app)** | Cinematic, scroll-driven Valorant codex, generated statically from a local data pipeline | `Next.js` `GSAP` `Lenis` |
 | 🔵 | **[arxstream](https://github.com/cyborgwastaken/arxstream)** | Two-person watch party: synced playback, chat and peer-to-peer webcam | `Node.js` `WebSockets` `WebRTC` |
 | 🟡 | **[ArxChess](https://github.com/arx-studios/arxchess)** | Chess platform with Stockfish AI, analysis board, puzzles, engine arena and online rooms | `Next.js` `Stockfish WASM` `WebSockets` |
+
+<details>
+<summary><b>🔍 How AXL serves a redirect</b>: click tracking can never slow it down</summary>
+<br />
+
+The redirect goes out first. Click tracking runs in Next.js `after()`, buffers in Redis, and gets flushed to Postgres in
+batches. Serverless has no background timers, so redirects take turns: whichever request wins a `SET NX EX 10` lock does the
+flush, at most once every 10 seconds.
+
+```mermaid
+flowchart LR
+    V([visitor]) -->|GET /abc123| R[route handler]
+    R -->|resolve code| C{Redis cache}
+    C -->|hit| X[[302 redirect]]
+    C -->|miss| P[(Supabase Postgres)]
+    P -->|populate| C
+    P --> X
+    R -.->|after response| I[INCR clicks:abc123]
+    I -.-> L{SET lock NX EX 10}
+    L -.->|won the lock| F[SCAN + GETDEL<br/>batched UPDATE]
+    F -.-> P
+```
+</details>
+
+<details>
+<summary><b>🔍 How ChronoVault stores a file</b>: nobody, including the server, ever sees the plaintext</summary>
+<br />
+
+```mermaid
+flowchart LR
+    F([file]) --> E[AES-256-GCM<br/>encrypt in browser]
+    E --> S[split into shards]
+    S --> I[(IPFS)]
+    S --> M[Merkle root]
+    M --> ETH[(Ethereum Sepolia)]
+    U([owner]) --> G{unlock gates<br/>time · geo · face}
+    G -->|all pass| D[fetch shards + verify root]
+    I --> D
+    ETH --> D
+    D --> O([decrypted file])
+```
+</details>
 
 #### Languages, compilers & native
 
 | | Project | What it does | Stack |
 |:-:|---|---|---|
-| 🟡 | **[ANX](https://github.com/arx-studios/arx-native-executable)** | A small compiled language for DSA practice: interpreter **and** LLVM native backend, 20 benchmarks green on both | `Rust` `LLVM 21` |
+| 🟡 | **[ANX](https://github.com/arx-studios/arx-native-executable)** | A small compiled language for DSA practice: tree-walking interpreter **and** LLVM native backend, 20 benchmarks green on both | `Rust` `LLVM 21` |
 | 🔵 | **[ArxCy](https://github.com/cyborgwastaken/ArxCy)** | A beginner-friendly, statically typed language that transpiles to C | `C++17` `ANTLR4` |
 | 🟡 | **[MacNook](https://macnook.vercel.app)** | Press Space on a folder in Finder and actually see what's inside: a Quick Look extension | `Swift` `SwiftUI` `Next.js` |
 
@@ -95,9 +123,9 @@ May 2024  ayushman[vit-serb]:      PyMOL/OpenGL molecular viz for Gaussian · GA
 
 | | Project | What it does | Stack |
 |:-:|---|---|---|
-| 🏆 | **[PersonaFi](https://github.com/cyborgwastaken/PersonaFi)** | Multi-agent personal finance assistant. **Finale, Google Agentic AI Day 2025, Bangalore** | `Google ADK` `Gemini` `Vertex AI` `Go` |
+| 🏆 | **[PersonaFi](https://github.com/cyborgwastaken/PersonaFi)** | Multi-agent personal finance assistant. **Finale, Google Agentic AI Day 2025, Bengaluru** | `Google ADK` `Gemini` `Vertex AI` `Go` |
 | 🏆 | **[NutriQuest](https://github.com/cyborgwastaken/AMDSlingshot)** | Meals become XP for an RPG hero, with Gemini as the in-game Oracle. **AMD Slingshot Prompt-a-thon** | `React 19` `FastAPI` `Gemini` |
-| 🔵 | **[ArtificialLife](https://github.com/cyborgwastaken/ArtificialLife)** | Neuroevolution sandbox: creatures with 8-6-3 neural brains learn to forage, no scripted behaviour | `Unity` `C#` |
+| 🔵 | **[ArtificialLife](https://github.com/cyborgwastaken/ArtificialLife)** | Neuroevolution sandbox: creatures with 8-6-3 neural brains learn to forage, with no scripted behaviour | `Unity` `C#` |
 | 🔵 | **[Cy-Snake-AI](https://github.com/cyborgwastaken/Cy-Snake-AI)** | A Deep Q-Learning agent that teaches itself Snake | `PyTorch` `Pygame` |
 
 #### Games
@@ -112,25 +140,65 @@ May 2024  ayushman[vit-serb]:      PyMOL/OpenGL molecular viz for Gaussian · GA
 
 <p align="right"><sub>full write-ups for every project → <a href="https://ayuxcyb.fun/work"><b>ayuxcyb.fun/work</b></a></sub></p>
 
-<!-- ─────────────────────────────  ARX STUDIOS  ───────────────────────────── -->
+## `git log --graph --all`
 
-### 🏛️ Arx Studios
+```mermaid
+%%{init: {'gitGraph': {'mainBranchName': 'life', 'showCommitLabel': true, 'rotateCommitLabel': true}}}%%
+gitGraph
+    commit id: "2023 · B.Tech CS&E @ VIT Bhopal"
+    commit id: "Dec 2023 · MolSpectra"
+    branch research
+    commit id: "May 2024 · DST-SERB project assistant"
+    checkout life
+    merge research
+    commit id: "2024 · BS Data Science @ IIT Madras"
+    branch defence
+    commit id: "May 2025 · DRDO PXE R&D intern"
+    checkout life
+    merge defence
+    branch hackathons
+    commit id: "Jul 2025 · Google Agentic AI Day finale" type: HIGHLIGHT
+    commit id: "Apr 2026 · AMD Slingshot"
+    checkout life
+    branch industry
+    commit id: "Feb 2026 · Cyberpal.ai SDE intern" type: HIGHLIGHT
+    commit id: "observability console"
+    commit id: "tracing + alerting"
+    checkout life
+    branch arx-studios
+    commit id: "Apr 2026 · Arx Studios launches"
+    commit id: "Jul 2026 · ANX compiler"
+    commit id: "Aug 2026 · MacNook"
+    commit id: "Sep 2026 · AXL + ArxChess"
+    commit id: "Oct 2026 · Arx Killfeed"
+    checkout life
+    merge hackathons
+    commit id: "2026 · NEXION capstone"
+    commit id: "HEAD → open to SRE / backend roles" type: HIGHLIGHT
+```
 
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/arx-studios"><b>arx-studios</b></a> is where my side projects grow up: a small studio for
-      tools, games and products that get a domain, a deploy pipeline and a real changelog.
-      Currently shipping <a href="https://axl.arxstudios.pro">AXL</a>, <a href="https://macnook.vercel.app">MacNook</a>,
-      <a href="https://arx-killfeed.vercel.app">Arx Killfeed</a>, <a href="https://github.com/arx-studios/arxchess">ArxChess</a>
-      and the <a href="https://github.com/arx-studios/arx-native-executable">ANX</a> compiler.
-    </td>
-  </tr>
-</table>
+## Regions
 
-<!-- ─────────────────────────────  STACK  ───────────────────────────── -->
+<sub>Where this service has been deployed. Drag, zoom and click the pins.</sub>
 
-### 🧰 Stack
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature", "properties": { "title": "Bhubaneswar", "description": "Home base", "marker-color": "#22d3ee", "marker-size": "large", "marker-symbol": "star" }, "geometry": { "type": "Point", "coordinates": [85.8245, 20.2961] } },
+    { "type": "Feature", "properties": { "title": "VIT Bhopal", "description": "B.Tech CS&E (8.80) · DST-SERB research project", "marker-color": "#0e7490", "marker-symbol": "college" }, "geometry": { "type": "Point", "coordinates": [76.8513, 23.0775] } },
+    { "type": "Feature", "properties": { "title": "IIT Madras", "description": "BS Data Science & Applications (online)", "marker-color": "#0e7490", "marker-symbol": "college" }, "geometry": { "type": "Point", "coordinates": [80.2337, 12.9915] } },
+    { "type": "Feature", "properties": { "title": "DRDO PXE, Chandipur", "description": "R&D intern · DRAD-MS & BLADEngine", "marker-color": "#ef4444", "marker-symbol": "rocket" }, "geometry": { "type": "Point", "coordinates": [87.0213, 21.4569] } },
+    { "type": "Feature", "properties": { "title": "Bengaluru", "description": "Google Agentic AI Day 2025 finale · PersonaFi", "marker-color": "#f59e0b", "marker-symbol": "star" }, "geometry": { "type": "Point", "coordinates": [77.5946, 12.9716] } },
+    { "type": "Feature", "properties": { "stroke": "#22d3ee", "stroke-width": 2, "stroke-opacity": 0.7 }, "geometry": { "type": "LineString", "coordinates": [[85.8245, 20.2961], [76.8513, 23.0775]] } },
+    { "type": "Feature", "properties": { "stroke": "#22d3ee", "stroke-width": 2, "stroke-opacity": 0.7 }, "geometry": { "type": "LineString", "coordinates": [[85.8245, 20.2961], [80.2337, 12.9915]] } },
+    { "type": "Feature", "properties": { "stroke": "#ef4444", "stroke-width": 2, "stroke-opacity": 0.7 }, "geometry": { "type": "LineString", "coordinates": [[85.8245, 20.2961], [87.0213, 21.4569]] } },
+    { "type": "Feature", "properties": { "stroke": "#f59e0b", "stroke-width": 2, "stroke-opacity": 0.7 }, "geometry": { "type": "LineString", "coordinates": [[85.8245, 20.2961], [77.5946, 12.9716]] } }
+  ]
+}
+```
+
+## Stack
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,py,go,rust,cs,cpp,swift,ts,js&theme=dark" alt="languages" /><br />
@@ -138,29 +206,19 @@ May 2024  ayushman[vit-serb]:      PyMOL/OpenGL molecular viz for Gaussian · GA
   <img src="https://skillicons.dev/icons?i=prometheus,docker,kubernetes,aws,gcp,linux,git,vercel,unity,unreal&theme=dark" alt="platform and gamedev" />
 </p>
 
-<!-- ─────────────────────────────  TELEMETRY  ───────────────────────────── -->
+## Telemetry
 
-### 📡 Telemetry
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=cyborgwastaken&theme=tokyonight&hide_border=true&background=0D1117&ring=22D3EE&fire=EF4444&currStreakLabel=22D3EE&sideLabels=94A3B8&dates=64748B" alt="GitHub streak" width="49%" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=cyborgwastaken&theme=github_dark" alt="commit throughput" width="100%" />
-</p>
+<p align="center"><img src="profile/telemetry/telemetry.svg" width="100%" alt="contributions, streak, repos, stars and languages" /></p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cyborgwastaken/cyborgwastaken/output/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cyborgwastaken/cyborgwastaken/output/github-snake.svg" />
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/cyborgwastaken/cyborgwastaken/output/github-snake-dark.svg" />
+    <img alt="a snake eating my contribution graph" src="https://raw.githubusercontent.com/cyborgwastaken/cyborgwastaken/output/github-snake-dark.svg" />
   </picture>
 </p>
 
-<!-- ─────────────────────────────  ON-CALL  ───────────────────────────── -->
-
-### 📟 Paging policy
+## Paging policy
 
 ```yaml
 on_call: ayushman
@@ -168,12 +226,8 @@ escalation:
   - sev3: open an issue on any repo                # I read them
   - sev2: linkedin.com/in/ayuxcyb                  # internships, roles, collabs
   - sev1: ayushmandas.dudul@gmail.com              # it's important, I'll reply
-  - sev0: you have a game idea or a gnarly backend problem — page immediately
-open_to: [backend, platform/SRE, observability, game dev]
+  - sev0: you have a game idea or a gnarly backend problem   # page immediately
+open_to: [backend, platform / SRE, observability, game dev]
 ```
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,45:0e7490,100:020617&height=120&section=footer" alt="" width="100%" />
-</p>
-
-<p align="center"><sub>this README is monitored · last incident: none · built by <a href="https://ayuxcyb.fun">ayuxcyb</a></sub></p>
+<p align="center"><sub>this README is monitored · board, stats and snake are redrawn by GitHub Actions · <a href="https://ayuxcyb.fun">ayuxcyb.fun</a></sub></p>
