@@ -10,6 +10,8 @@ A panel is a list of rows. Each row is a list of (text, class) spans, or a Cmd f
 from dataclasses import dataclass, field
 from xml.sax.saxutils import escape
 
+from motion import Clock, rise, settle
+
 MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
 BG, CHROME, BORDER = "#0a0e14", "#0f141c", "#1e293b"
 TEXT, DIM, CYAN, DEEP = "#cbd5e1", "#64748b", "#22d3ee", "#0e7490"
@@ -78,6 +80,10 @@ class Panel:
         """Render the panel. `extra` is raw SVG drawn on top of the body (for charts etc)."""
         w, h = self.width, height or self.height
         out = [frame(w, h, self.title)]
+        # one-shot clock long enough for the last row's spring to settle
+        n_rows = sum(1 for r in self.rows if r and not isinstance(r, Cmd))
+        typing = sum(len(r.text) / 40 + 0.1 for r in self.rows if isinstance(r, Cmd))
+        clock = Clock(self.start + typing + n_rows * self.step + settle("heavy") + 0.2, loop=False)
         t, y = self.start, TITLE_H + 34
         for i, row in enumerate(self.rows):
             n_chars = len(row.text) + 3 + len(row.comment) if isinstance(row, Cmd) else sum(len(s) for s, _ in row)
@@ -91,7 +97,9 @@ class Panel:
                                f'opacity="0">{escape(row.comment)}{reveal(t)}</text>')
                 t += 0.1
             elif row:
-                out.append(f'<text x="{PAD_X}" y="{y}" opacity="0">{spans(row)}{reveal(t)}</text>')
+                # rise through a mask on a heavy spring (never a plain fade)
+                out.append(rise(f'<text x="{PAD_X}" y="{y}">{spans(row)}</text>', clock,
+                                (PAD_X - 6, y - 15, w - PAD_X - 10, 20), t, None, "heavy"))
                 t += self.step
             y += LINE_H
         out.append(extra)
@@ -103,8 +111,14 @@ def reveal(begin: float) -> str:
     return f'<set attributeName="opacity" to="1" begin="{begin:.2f}s" fill="freeze"/>'
 
 
+PULSE = '<animate attributeName="opacity" values="1;.3;1" dur="1.8s" repeatCount="indefinite"/>'
+
+
 def spans(row: list[Span]) -> str:
-    return "".join(f'<tspan class="{c}">{escape(t)}</tspan>' if c else escape(t) for t, c in row)
+    """Spans with class "pulse" keep breathing forever, so a panel is alive whenever it's seen."""
+    return "".join(
+        f'<tspan class="{c}">{escape(t)}{PULSE if "pulse" in c.split() else ""}</tspan>' if c else escape(t)
+        for t, c in row)
 
 
 def typed(out: list[str], text: str, x: float, y: float, begin: float, clip_id: str, cps: float = 40) -> float:

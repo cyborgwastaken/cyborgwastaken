@@ -7,6 +7,7 @@ their own builders). Re-run after editing any content below:
 from pathlib import Path
 from xml.sax.saxutils import escape
 
+from motion import Clock, pop
 from term import (CHAR_W, CYAN, DEEP, DIM, PAD_X, TEXT, Panel, frame, overlay, reveal, typed, wrap)
 
 OUT = Path(__file__).resolve().parent / "panels"
@@ -76,9 +77,9 @@ divider("div-games.svg", "cd ~/games && ls", "# unity, hdrp, game jams")
 
 # ── project cards ──────────────────────────────────────────────────────────────
 STATUS = {
-    "live": ("● LIVE", "ok"),
+    "live": ("● LIVE", "ok pulse"),
     "shipped": ("● SHIPPED", "cy"),
-    "dev": ("● BUILDING", "warn"),
+    "dev": ("● BUILDING", "warn pulse"),
     "award": ("★ FINALIST", "vi"),
 }
 CARD_W, DESC_CHARS = 432, 48
@@ -154,18 +155,20 @@ stack = [
 ]
 s = Panel("ayushman@arx-studios: ~ — zsh")
 s.cmd("stack --list --group")
-chips, t = [], 0.25 + len("stack --list --group") / 40 + 0.1
+CHIP_CLOCK = Clock(6.0, loop=False)
+chips, t0 = [], 0.25 + len("stack --list --group") / 40 + 0.1
 for gi, (group, tags) in enumerate(stack):
     s.add((f"{group:<12}", "dim"))
     y = 36 + 34 + (gi + 1) * 22
     x = PAD_X + 12 * CHAR_W
+    t = t0 + gi * s.step + 0.08  # tags follow their group label's rise
     for tag in tags:
         w = len(tag) * CHAR_W + 18
-        chips.append(f'<g opacity="0"><rect x="{x:.1f}" y="{y - 15}" width="{w:.1f}" height="21" rx="5" '
-                     f'fill="#0f1a24" stroke="{DEEP}"/><text x="{x + 9:.1f}" y="{y}" class="cy">{escape(tag)}</text>'
-                     f'{reveal(t)}</g>')
+        chip_svg = (f'<rect x="{x:.1f}" y="{y - 15}" width="{w:.1f}" height="21" rx="5" fill="#0f1a24" stroke="{DEEP}"/>'
+                    f'<text x="{x + 9:.1f}" y="{y}" class="cy">{escape(tag)}</text>')
+        chips.append(pop(chip_svg, CHIP_CLOCK, x + w / 2, y - 4.5, t, None, .75))  # grow out, snappy spring
         x += w + 8
-        t += 0.035
+        t += 0.04
 s.pad_bottom = 26
 write("stack.svg", s.render(extra="\n".join(chips)))
 
