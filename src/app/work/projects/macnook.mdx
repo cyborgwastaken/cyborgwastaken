@@ -1,0 +1,41 @@
+---
+title: "MacNook: Quick Look Folder Previews for macOS"
+publishedAt: "2026-08-10"
+summary: "A macOS Quick Look extension, written in Swift, that shows the real contents of a folder when you press Space in Finder, plus a Next.js marketing site."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Founder & Lead Developer, Arx Studios"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://macnook.vercel.app"
+---
+
+## Overview
+MacNook is an Arx Studios product made of two repositories: a native macOS app with an embedded Quick Look extension (`arx-studios/macnook`) and its marketing website (`arx-studios/macnook-website`). By default, pressing Space on a folder in Finder shows only a generic icon and an item count. MacNook replaces that with a scrollable list of the folder's actual contents.
+
+The app itself is a small SwiftUI host that walks the user through enabling the extension in System Settings. The extension does the real work. The website presents the product, install steps and a download link to the GitHub releases page.
+
+## Key Features
+- **Instant folder preview**: Space (or Cmd+Y) on any folder in Finder opens a preview of its contents.
+- **File details**: shows name, file type icon, size and last modified date for each item.
+- **Sensible ordering**: folders are listed first, then files, each sorted alphabetically; hidden files are skipped.
+- **Graceful states**: empty folders and permission errors show an explicit message instead of failing.
+- **Guided setup**: a three-step SwiftUI onboarding flow deep-links into the Login Items & Extensions pane of System Settings.
+- **Dark mode and broad support**: adapts to system appearance; targets macOS 13 or later on Apple Silicon and Intel.
+- **Marketing site**: a Next.js landing page with animated hero text and click-spark effects.
+
+## Technologies Used
+- **Swift and SwiftUI**: the host app and its onboarding flow.
+- **QuickLook / Quartz (QLPreviewProvider)**: the preview extension, registered for the `public.folder` content type and returning a bitmap reply.
+- **Foundation and UniformTypeIdentifiers**: folder scanning with resource keys (size, type, modification date) and file type resolution.
+- **Xcode**: project with separate app and extension targets and shared schemes.
+- **Next.js 16, React 19, TypeScript, Tailwind CSS 4**: the marketing website.
+- **Motion**: animation library behind the website's text and spark effects.
+- **Vercel**: hosting for the website.
+
+## Challenges and Learnings
+Quick Look extensions run sandboxed, so the provider has to request the security-scoped URL Quick Look hands it and release it afterwards. The scanner maps low-level read failures to distinct permission-denied and unreadable errors, which lets the preview render a clear message. It also resolves each item's content type once at scan time, with an extension-based fallback, so icon lookup stays cheap for large folders. The preview height is computed from the item count. macOS also requires users to enable Quick Look extensions manually, so the host app is built around guiding that step rather than hiding it.
+
+## Outcome
+MacNook is a small, focused utility with a working Swift codebase and a live website at macnook.vercel.app. The repository is public and the site points to GitHub releases for downloads. Both repositories were created in August 2026 and are at an early stage.

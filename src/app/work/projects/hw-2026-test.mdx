@@ -1,0 +1,38 @@
+---
+title: "Doofus Adventure: Hitwicket Game Developer Challenge"
+publishedAt: "2026-08-20"
+summary: "A 3D platform-hopping game in Unity 6 built as a submission for the Hitwicket Game Developer role, with JSON-driven tuning, scoring and start and game-over flow."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Game Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://play.unity.com/en/games/b84e5e1e-516c-47b0-a345-73aba7ed97eb/webbuild"
+---
+
+## Overview
+Doofus Adventure is a 3D game built for the Hitwicket Game Developer Challenge. The player guides a character named Doofus across a chain of pulpits: platforms that count down and vanish. The goal is to land on at least 50 of them before falling off. The game is playable as a Unity web build, and the README includes a demo video and screenshots of the start, HUD and game-over screens.
+
+Gameplay values are not hardcoded. Player speed and pulpit timing are read at runtime from a JSON file ("Doofus's Diary") in StreamingAssets, with safe defaults if the file is missing or malformed.
+
+## Key Features
+- **JSON-driven configuration**: Move speed, pulpit lifetime range and spawn timing loaded from `doofus_diary.json` with fallbacks.
+- **Pulpit spawner**: At most two pulpits alive at once, placed on a grid adjacent to the last, never overlapping and never respawning where the player just left.
+- **Escalating difficulty**: The next pulpit spawns after 40 percent of the current one's lifetime at the start, ramping to 70 percent by score 50.
+- **Scoring**: Score increments once per newly landed pulpit, deduplicated per platform.
+- **Game flow**: Start screen, in-game HUD, fall detection, and a game over screen with final score and a full-reset Retry.
+- **Dead-zone follow camera**: Custom camera system.
+
+## Technologies Used
+- **Unity 6 and C#**: Game logic.
+- **Unity Starter Assets ThirdPersonController**: Character movement, integrated without modifying its source.
+- **Event bus (`GameEvents`)**: Decouples spawner, score, UI and player systems.
+- **StreamingAssets JSON**: Runtime tuning data.
+- **Unity Play (web build)**: Hosted build.
+
+## Challenges and Learnings
+The README lists explicit edge cases that the code addresses: malformed config fallback, non-overlapping placement, per-pulpit score deduplication, and a Retry that leaves no leaked coroutines, timers or stale pulpits. The event-based architecture with a Start, Playing, Game Over state machine keeps systems independent and makes resets reliable.
+
+## Outcome
+A complete, playable submission for the Hitwicket Game Developer role covering all three specified levels, with a hosted web build.

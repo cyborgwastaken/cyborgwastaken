@@ -1,0 +1,39 @@
+---
+title: "Arx Studios Landing Page: Coming-Soon Site with Google Sign-In"
+publishedAt: "2026-04-11"
+summary: "A Next.js landing page for Arx Studios with a WebGL shader background, animated footer, team carousel and Supabase-backed Google authentication."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Founder & Lead Developer, Arx Studios"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://arxcomingsoon.vercel.app"
+---
+
+## Overview
+This is the coming-soon landing page for Arx Studios, built and deployed by Ayushman Das. The page shows the studio name over an animated shader background, followed by a team section and a cinematic footer.
+
+Beyond the static page, the repository includes a working authentication flow. It has Google sign-in through Supabase, an OAuth callback route, a welcome page for signed-in users and a privacy page. The early-access sign-up call to action is currently commented out of the home page.
+
+## Key Features
+- **Shader hero**: a full-screen animated shader background behind the studio name.
+- **Team carousel**: a profile-card carousel introducing the team.
+- **Cinematic footer**: an animated footer component.
+- **Google authentication**: sign-in modal and OAuth callback handled with Supabase.
+- **Protected welcome page**: server-side session check that redirects anonymous visitors and greets users by first name.
+- **Page transitions and scroll cue**: small motion details across routes.
+
+## Technologies Used
+- **Next.js 16 (App Router), React 19 and TypeScript**: application framework.
+- **Tailwind CSS 4, shadcn and Base UI**: styling and component primitives.
+- **Three.js**: WebGL shader animation.
+- **GSAP and Framer Motion**: animation and transitions.
+- **Supabase (@supabase/ssr)**: authentication with cookie-based sessions refreshed in middleware.
+- **Vercel**: hosting.
+
+## Challenges and Learnings
+The authentication code follows the server-side pattern for Next.js: separate browser and server Supabase clients and a middleware helper that refreshes the session cookie on each request, creating a fresh client per request. Rendering a Three.js shader behind server-rendered pages means keeping the heavy visual layer in client components while the page content stays simple.
+
+## Outcome
+The site is live at arxcomingsoon.vercel.app as the public face of Arx Studios while products are in development. It also provides a working base for authentication that could support a future waitlist or early-access flow.

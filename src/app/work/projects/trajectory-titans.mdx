@@ -1,0 +1,34 @@
+---
+title: "Trajectory Titans: A Projectile Physics Target Game"
+publishedAt: "2026-08-14"
+summary: "A Unity WebGL game built around projectile simulation, where the player launches balls to destroy every target in the scene."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Game Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/TrajectoryTitans"
+---
+
+## Overview
+Trajectory Titans is a projectile game based on projectile simulation in games. The player's goal is to destroy all the targets in the game environment, and every missed shot reduces the remaining ball count, so aim and trajectory judgement matter.
+
+The repository holds the exported Unity WebGL build (loader, framework, data and WebAssembly files plus the HTML shell), so the game runs directly in a browser. The Unity source project itself is not in the repository.
+
+## Key Features
+- **Projectile-based gameplay**: Shots follow simulated projectile motion, so players must account for trajectory.
+- **Limited ammo**: A missed shot decreases the ball count, adding risk to each attempt.
+- **Clear win condition**: Destroy every target in the environment.
+- **Browser playable**: Shipped as a Unity WebGL build with a loading bar and fullscreen button.
+
+## Technologies Used
+- **Unity**: Game engine used to build the game and export it for the web.
+- **WebGL and WebAssembly**: Runtime for running the build in the browser.
+- **HTML and CSS**: Unity's web template for the canvas, loading bar and footer.
+
+## Challenges and Learnings
+The core design challenge is making projectile physics feel readable and fair as a game mechanic, tying a physical simulation to a limited-resource loop. The repository contains only the compiled web build and a short README, so implementation details are not documented here.
+
+## Outcome
+A small, playable physics-based target game exported to WebGL. The repository is minimal, with a brief README describing the objective and the ball-count rule.

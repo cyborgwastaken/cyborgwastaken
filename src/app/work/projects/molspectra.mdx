@@ -1,0 +1,36 @@
+---
+title: "MolSpectra: A GAMESS Input Builder for Molecular Visualization"
+publishedAt: "2023-12-20"
+summary: "A Python and Tkinter desktop tool that generates input files for the GAMESS quantum chemistry software from drop-down parameter choices."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Software Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/MolSpectra"
+---
+
+## Overview
+MolSpectra is an input builder for a molecular visualization workflow. Its main tool is a Tkinter GUI that lets users configure and generate input files for GAMESS (General Atomic and Molecular Electronic Structure System), so they do not have to write the input format by hand.
+
+The user picks parameters, previews the resulting input in the window, and the app saves it to a text file named `gamess_input.txt`.
+
+## Key Features
+- **Parameter selection**: Drop-downs for initial guess method, run type (Energy, Hessian, Optimization), SCF method (RHF, UHF, ROHF, GVB, MCSCF), basis set, charge, spin and memory allocation.
+- **Live preview**: The generated GAMESS input is shown in a text area.
+- **File export**: The input is saved to disk, with a file dialog used in later builds.
+- **Themed UI**: A clean look using ttkthemes, with a changeable theme.
+- **Versioned builds**: The repository keeps beta builds (0.1 to 0.9, then 1.1) and stable releases (the CyPy and VipPy input builders).
+
+## Technologies Used
+- **Python**: Application logic and input file generation.
+- **Tkinter and ttk**: Desktop GUI widgets.
+- **ttkthemes**: Theming for the interface.
+- **GitHub Actions**: A Python workflow file is included for CI.
+
+## Challenges and Learnings
+The code is organized around a `GamessGenerator` class that maps form selections to the text layout GAMESS expects. The build history shows the tool evolving iteratively through many versions, and the work required understanding GAMESS input conventions well enough to expose them safely through restricted drop-down choices.
+
+## Outcome
+A working, versioned GUI utility with stable builds published in the repository, usable by anyone with GAMESS installed.

@@ -19,7 +19,7 @@ const person: Person = {
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -37,7 +37,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/ayuxcyb/",
+    link: "https://www.linkedin.com/in/ayuxcyb/",
     essential: true,
   },
   {
@@ -62,11 +62,11 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: `/api/og/generate?title=${encodeURIComponent(`${person.name}'s Portfolio`)}`,
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building reliable systems, and the games and tools I want to exist</>,
   featured: {
     display: true,
     title: (
@@ -101,8 +101,8 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
@@ -140,15 +140,7 @@ const about: About = {
             normalises and audits access/error logs and resolves user identity, supporting the product's GRC controls.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          // {
-          //   src: "/images/projects/project-01/cover-01.jpg",
-          //   alt: "Once UI Project",
-          //   width: 16,
-          //   height: 9,
-          // },
-        ],
+        images: [],
       },
       {
         company: "DRDO - PXE, Defense Research & Development Organisation",
@@ -200,8 +192,6 @@ const about: About = {
         name: "BS Data Science & Applications | Online",
         description: <>Indian Institute of Technology, Madras | 2024 - 2028</>,
       },
-      
-      
     ],
   },
   technical: {
@@ -276,19 +266,15 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: `Blog – ${person.name}`,
+  description: `Writing by ${person.name}`,
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Software, game and research projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
@@ -296,50 +282,7 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  images: [],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

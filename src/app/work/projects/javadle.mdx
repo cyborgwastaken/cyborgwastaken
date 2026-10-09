@@ -1,0 +1,32 @@
+---
+title: "JavaDLE: Console Grid Engine in Java"
+publishedAt: "2026-09-05"
+summary: "A small early-stage Java console program that builds a configurable grid of cells whose text and color can be modified and printed."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/JavaDLE"
+---
+
+## Overview
+JavaDLE is a very small Java console project, currently a prototype foundation rather than a finished application. The program asks the user whether they want a square or rectangular grid, reads the dimensions from the terminal, and builds a matrix of cells that can be inspected and edited.
+
+The repository contains three source files and no README, so the intended end goal (a "player enters code here" section in the entry point hints at a code-driven puzzle or learning concept) is not documented. This page describes only what the code does today.
+
+## Key Features
+- **Grid creation**: Choose a square or rectangular grid and its size through console prompts, with input validation on the shape choice.
+- **Cell model**: Each `Cell` stores its coordinates, a text value (default "x") and a color name (default "white").
+- **Matrix operations**: `Matrix` builds the 2D cell array, prints all cells, prints a 1-indexed coordinate view row by row, and modifies a cell's text and color by position.
+
+## Technologies Used
+- **Java**: Core language for all logic.
+- **java.util.Scanner**: Console input handling.
+
+## Challenges and Learnings
+The code shows a clean object-oriented split between a cell, a matrix of cells, and a console entry point, with encapsulated fields and overloaded constructors. It is also clearly unfinished: `modifyCell` is called with hardcoded coordinates and empty strings, and there is no bounds checking, which are the natural next steps.
+
+## Outcome
+An early exploratory project (about 3 KB of Java) that demonstrates fundamentals of OOP and 2D array handling. It has no deployment or submission context.

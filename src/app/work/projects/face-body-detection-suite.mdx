@@ -1,0 +1,34 @@
+---
+title: "Face-Body-Detection-Suite: Computer Vision Experiments"
+publishedAt: "2024-05-02"
+summary: "A set of three OpenCV and MediaPipe scripts for real-time facial recognition, body and hand pose tracking, and face extraction from images. Built as a first-year AI and ML project at VIT Bhopal University."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/Face-Body-Detection-Suite"
+---
+
+## Overview
+Face-Body-Detection-Suite is a collection of three small computer vision programs developed as a first-year AI and Machine Learning project at VIT Bhopal University. Each script is standalone and focuses on a different task: recognising known faces from a webcam, tracking the body, face and hands, and cropping faces out of still images.
+
+## Key Features
+- **Facial recognition**: A `SimpleFacerec` class encodes known faces from a folder of images, then identifies them in a live webcam feed using face distance matching and labels them by file name. Frames are downscaled for faster processing.
+- **Body and posture tracking**: Uses the MediaPipe Holistic model for face mesh contours and pose landmarks, adds a separate hand tracker for up to two hands, and draws lines from each wrist to the shoulders.
+- **Face extractor**: Detects faces with a Haar cascade classifier and saves each crop as a separate image in a folder named after the source image.
+- **Bundled cascades**: Includes a set of OpenCV Haar cascade files for faces, eyes, bodies and more.
+
+## Technologies Used
+- **Python**: All three tools.
+- **OpenCV**: Video capture, image processing, drawing and Haar cascade detection.
+- **face_recognition and dlib**: Face encodings and matching.
+- **MediaPipe**: Holistic and hand landmark detection.
+- **NumPy**: Array handling for locations and distances.
+
+## Challenges and Learnings
+The README devotes a section to installing dlib and face_recognition, which reflects a common practical hurdle with native dependencies on Windows. The code shows the trade-offs of real-time vision: the recognition script resizes frames to a quarter of their size to keep the webcam feed responsive, and the MediaPipe script uses low detection confidence thresholds to keep tracking continuous. The project is a learning-stage set of scripts rather than a packaged application.
+
+## Outcome
+A working trio of demos that cover recognition, pose tracking and detection-based cropping, and an early foundation for later computer vision projects.

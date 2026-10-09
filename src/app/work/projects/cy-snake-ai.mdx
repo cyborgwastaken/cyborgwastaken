@@ -1,0 +1,35 @@
+---
+title: "Cy-Snake-AI: Reinforcement Learning Snake Agent"
+publishedAt: "2024-05-02"
+summary: "An AI agent that teaches itself to play Snake using Deep Q-Learning in PyTorch, with a Pygame environment and live training plots."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/Cy-Snake-AI"
+---
+
+## Overview
+Cy-Snake-AI trains a neural network to play the classic Snake game through reinforcement learning. The game is implemented in Pygame, and an agent learns from its own experience by playing repeated games, storing transitions and updating a Q-network.
+
+## Key Features
+- **Game environment**: A `SnakeGameAI` class that exposes reset, step, reward and collision logic for the agent, plus a standalone playable version.
+- **Compact state**: An 11-value state describing danger straight, right and left, current direction, and the relative location of the food.
+- **Deep Q-Learning**: A feedforward network with one hidden layer of 256 units outputs Q-values for three actions (straight, right, left).
+- **Replay memory**: Short-term training after each move and long-term batch training on random samples of 1000 experiences.
+- **Exploration schedule**: Epsilon-greedy action selection that reduces randomness as more games are played.
+- **Live plots**: Scores and mean scores are plotted during training with Matplotlib, and model weights can be saved.
+
+## Technologies Used
+- **Python**: All components.
+- **PyTorch**: Network definition, Adam optimiser and MSE loss for the Q-learning update.
+- **Pygame**: Game rendering and logic.
+- **Matplotlib and IPython**: Dynamic training charts.
+
+## Challenges and Learnings
+The key idea in the code is designing a small but informative state so a simple network can learn quickly, rather than feeding raw pixels. The trainer implements the Bellman update by building target Q-values from reward plus a discounted maximum of the next state's prediction, with a discount rate of 0.9 and a learning rate of 0.001. Balancing exploration and exploitation is handled by a simple epsilon schedule tied to the number of games played.
+
+## Outcome
+A complete, small-scale reinforcement learning project from environment to trainer, documented in the README with setup steps and a description of each module.

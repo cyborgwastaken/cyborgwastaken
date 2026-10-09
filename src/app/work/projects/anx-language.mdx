@@ -1,0 +1,38 @@
+---
+title: "ANX: A Small Compiled Language for Data Structures and Algorithms"
+publishedAt: "2026-07-08"
+summary: "A Rust-built programming language with Java-like syntax, a tree-walking interpreter and LLVM native compilation, designed for practicing data structures and algorithms."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Creator & Lead Developer, Arx Studios"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/arx-studios/arx-native-executable"
+---
+
+## Overview
+ANX (Arx Native eXecutable) is an Arx Studios language project. It is a small but real compiled language aimed at CS students practicing data structures and algorithms. Python hides runtime behavior, while Java and C++ need heavy boilerplate for stacks, queues and trees. ANX offers Java-like syntax, no setup ceremony and genuine compiled semantics.
+
+Programs use the `.nx` extension and can be checked, interpreted instantly for fast iteration, or compiled to a native binary through LLVM. Both paths share one front end and are tested against the same programs. The project is documented phase by phase in the repository.
+
+## Key Features
+- **Three CLI commands**: `anx check` (lex, parse and type-check), `anx run` (interpreter) and `anx build` (native binary).
+- **Dual backends**: a tree-walking interpreter and an LLVM 21 code generator with a small C runtime shim, sharing semantic analysis.
+- **Consistent behavior**: identical exit codes (0 success, 1 compile error, 2 runtime error) on both paths.
+- **Benchmark suite**: 20 classic DSA problems (binary search, sorting algorithms and more) with expected outputs, run through both paths.
+- **Roadmap with written plans**: operators and strings are done; classes, generics, collections, tree/graph types, diagnostics and a further benchmark suite are planned in docs.
+
+## Technologies Used
+- **Rust (2024 edition)**: the whole compiler and interpreter.
+- **inkwell and LLVM 21**: native code generation.
+- **C**: a runtime shim linked into compiled programs.
+- **clap**: the command-line interface.
+- **thiserror and anyhow**: error handling.
+- **assert_cmd and predicates**: CLI integration testing.
+
+## Challenges and Learnings
+The design centers on a single AST and semantic analysis pass used by the parser, interpreter and code generator, so the two execution paths cannot drift apart. The hand-written lexer and recursive-descent, precedence-climbing parser keep the front end easy to reason about. The repository's progress notes record deliberate deviations from the original syntax draft, such as generalizing assignment targets so `arr[j] = tmp` works. Testing goes beyond IR verification, since the unit tests include JIT-executed correctness checks and every benchmark runs through both the interpreter and a built binary.
+
+## Outcome
+P0 (lexer through native codegen) is complete, with all 20 benchmark programs passing on both paths. The repository documents 150 unit tests plus CLI integration tests. Later phases (classes, generics, collections) are planned but not yet built. The README describes it as a solo, nights-and-weekends project.

@@ -1,0 +1,45 @@
+---
+title: "ChronoVault: Encrypted, Sharded File Vault on IPFS and Ethereum"
+publishedAt: "2026-02-10"
+summary: "ChronoVault encrypts files with AES-256-GCM, shreds them into chunks stored on IPFS, and verifies integrity with Merkle roots. It evolved over four versions from a vanilla HTML demo to a Web3 app with Supabase auth, time and geo locks, and a face-biometric gate."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Full-Stack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://chronovault-psi.vercel.app"
+---
+
+## Overview
+
+ChronoVault is a secure vaulting platform: a file is encrypted, split into chunks, stored as content-addressed blobs, and later reconstructed and verified before decryption. It began as an EPICS project at VIT Bhopal University and is documented across two GitHub repositories that are the same project. `ChronoVaultVersions` (created February 2026, with a GitHub Pages site) holds four numbered iterations, and `ChronoVault` (created March 2026, deployed on Vercel) is the cleaned-up standalone version of the latest design.
+
+The progression is: v1 vanilla HTML with a Go backend, v2 a React front end, v3 Web3 integration (IPFS and Ethereum), and v4 with blockchain code and manifests. The standalone repository adds Supabase auth, an admin page, Tailwind and shadcn/ui, tests and a Python biometric service.
+
+## Key Features
+
+- **Encrypt, shred and verify**: AES-256-GCM encryption with a random key, fixed-size chunking, SHA-256 hashing, and a Merkle tree whose root is checked on retrieval alongside the original file hash.
+- **Decentralised storage**: chunks are pinned to IPFS through Pinata, with retries and best-effort unpinning if an upload partly fails.
+- **Time-lock and geo-lock uploads**: separate flows for releasing data only under time or location conditions, combined with on-chain transactions on the Sepolia testnet through MetaMask.
+- **Biometric gate**: a FastAPI service using FaceNet embeddings (MTCNN and InceptionResnetV1) to enroll and verify faces from webcam captures, with an optional PIN.
+- **Auth and roles**: Supabase authentication with JWT verification on the Go backend, protected routes and an admin page.
+
+## Technologies Used
+
+- **Go**: backend API, crypto pipeline, Merkle tree and IPFS integration.
+- **React 19, Vite, Tailwind CSS v4, shadcn/ui and Framer Motion**: front end.
+- **ethers and MetaMask**: wallet and smart contract interaction on Sepolia.
+- **IPFS (Pinata)**: chunk storage.
+- **Supabase**: authentication and Postgres tables.
+- **Python, FastAPI, PyTorch and facenet-pytorch**: biometric microservice.
+- **Vitest and React Testing Library**: tests for UI components and route protection.
+- **Vercel and GitHub Pages**: hosting.
+
+## Challenges and Learnings
+
+The repository history shows the system being rebuilt several times, which is the main lesson: security design drove the architecture. Examples include a nil Merkle root for empty input to avoid accepting empty manifests, rollback of pinned chunks on failure, support for both ES256 (JWKS) and HS256 Supabase tokens, and splitting the heavy ML biometric work into its own service. Coordinating three runtimes (Go, Node, Python) plus Supabase and a blockchain network required careful environment and CORS configuration.
+
+## Outcome
+
+A deployed demo at the project link, with the full version history preserved in `cyborgwastaken/ChronoVaultVersions` and the latest design in `cyborgwastaken/ChronoVault`. Built as part of the EPICS coursework at VIT Bhopal University.

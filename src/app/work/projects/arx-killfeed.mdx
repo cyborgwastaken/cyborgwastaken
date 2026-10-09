@@ -1,0 +1,45 @@
+---
+title: "Arx Killfeed: A Cinematic Valorant Codex"
+publishedAt: "2026-10-09"
+summary: "A scroll-driven Next.js reference site for Valorant agents, weapons, maps, ranks and game modes, generated statically from a local data pipeline. An Arx Studios project."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Founder & Lead Developer, Arx Studios"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://arx-killfeed.vercel.app"
+---
+
+## Overview
+
+Arx Killfeed (internally titled "Valorant Codex") is a fan-made encyclopedia for the game Valorant, built by Arx Studios. It presents agents, weapons, maps, ranks and game modes as a cinematic, scroll-driven experience rather than a plain database table, and is deployed on Vercel.
+
+There is no database. A Python pipeline outside the repo produces image folders and `stats.json` files, and the Next.js app reads those folders directly at build time to generate its pages.
+
+## Key Features
+
+- **Agent, weapon and map pages**: dynamic routes for each agent, weapon and map, plus index pages for ranks, modes and extras.
+- **Scroll-driven presentation**: chapters, horizontal reels and pinned stages that animate as you scroll.
+- **Damage falloff chart**: a custom SVG chart of head, body and leg damage by range that draws on scroll with a hover readout.
+- **Map explorer and galleries**: interactive map callout browsing and image galleries.
+- **Rank ladder and stat rows**: animated visualisations of ranks and weapon statistics.
+- **Sound and page transitions**: audio feedback and animated route transitions.
+
+## Technologies Used
+
+- **Next.js 15 (App Router) and React 19**: routing, static generation and UI.
+- **TypeScript**: typed data layer and components.
+- **GSAP and Motion**: scroll-triggered timelines and component animation.
+- **Lenis**: smooth scrolling.
+- **Matter.js**: physics-based interactive elements.
+- **Hugeicons**: icon set.
+- **Vercel**: hosting.
+
+## Challenges and Learnings
+
+The site's data comes entirely from files on disk, so the main design work was a typed data layer that turns folders and stats files into agents, weapons, maps and ranks, and then composing those into reusable animated building blocks (a shared "film" component set with chapters, stages and reels). Keeping heavy scroll animation consistent across many page types, and building the chart by hand in SVG instead of using a chart library, were the main front-end exercises.
+
+## Outcome
+
+A live, deployed showcase site covering a full game's roster, arsenal and maps, demonstrating data-driven static generation and polished motion design.

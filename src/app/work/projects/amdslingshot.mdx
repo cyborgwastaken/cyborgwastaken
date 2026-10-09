@@ -1,0 +1,45 @@
+---
+title: "NutriQuest: Gamified Nutrition Tracker with an AI Oracle"
+publishedAt: "2026-04-10"
+summary: "NutriQuest turns healthy eating into an RPG: meals become XP, stats and buffs for a hero character, with Gemini parsing meal descriptions and acting as an in-game Oracle. Built as my submission for the AMD Slingshot Prompt-a-thon."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Full-Stack Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/AMDSlingshot"
+---
+
+## Overview
+
+NutriQuest is a web app that gamifies nutrition. Users log meals in plain language, and the app converts the nutritional content into progress for a hero character: experience points, levels up to 100, stats such as STR, VIT, AGI, INT and END, temporary buffs and debuffs, and quests. A Foodex page tracks discovered foods by rarity, like a collectible catalogue.
+
+The repository is my submission for the AMD Slingshot Prompt-a-thon. It is a TypeScript React frontend with a small Python FastAPI backend that calls the Gemini API, plus container and Cloud Build configuration for deployment.
+
+## Key Features
+
+- **Natural-language meal logging**: the backend asks Gemini to return structured nutrition data (calories, macros, fiber, healthiness) for a described meal, and can also accept a base64 image for scanning.
+- **Game engine**: client-side modules for XP and leveling (an exponential curve), stat calculation from meal macros, and a buff system with timed effects such as Protein Surge or Mind Clarity.
+- **The Oracle**: a chat endpoint that receives the hero's class, level, stats, active quests and recent meals and replies in character.
+- **Quests and Foodex**: quest tracker with default quests, and a rarity-filtered, searchable food collection.
+- **Graceful fallback**: with no Gemini key configured, the backend returns mock responses so the app still runs.
+- **Tests**: Vitest unit tests for the stat and XP logic.
+
+## Technologies Used
+
+- **React 19, TypeScript and Vite**: frontend application and build.
+- **Zustand**: game state store.
+- **Framer Motion and Recharts**: animation and data visualisation; Tailwind CSS v4 for styling.
+- **Firebase**: authentication and hosting configuration.
+- **FastAPI, httpx and Pydantic (Python)**: backend API and Gemini calls.
+- **Google Gemini**: meal parsing and Oracle responses.
+- **Docker, Cloud Build and Cloud Run**: containerised deployment scripts.
+
+## Challenges and Learnings
+
+The main design problem was translating real nutrition data into believable game mechanics, which the code handles with pure, testable functions for leveling, effective stats (base plus unexpired buffs, capped) and buff selection. On the AI side, the backend instructs Gemini to respond only with JSON and extracts the array defensively, with a mock path so development does not depend on an API key.
+
+## Outcome
+
+A working full-stack prototype built within a hackathon timeframe (the repository was created and last pushed on the same day) for the AMD Slingshot Prompt-a-thon, with deployment config included. No public live URL is set on the repository.

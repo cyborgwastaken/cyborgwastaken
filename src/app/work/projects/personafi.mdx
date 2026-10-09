@@ -1,0 +1,40 @@
+---
+title: "PersonaFi: Multi-Agent AI Financial Assistant"
+publishedAt: "2025-07-27"
+summary: "A multi-agent personal finance assistant built on Google's Agent Development Kit and Gemini, with a React dashboard and a mock Fi Money MCP server. Submitted to the Finale at Google Agentic AI Day 2025 in Bangalore."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/PersonaFi"
+---
+
+## Overview
+PersonaFi is a hackathon project that turns a user's financial data into conversational analysis, forecasts and action plans. It was submitted to the Finale at Google Agentic AI Day 2025 in Bangalore. The repository is the combined, integrated version of components that were built separately by the team: the AI agents, a frontend dashboard and a mock Fi Money MCP server.
+
+A master agent running on Gemini 2.5 Pro orchestrates a pipeline of specialised sub-agents. A user's question is first rewritten for clarity, a planner decides which financial data sources are needed, a data agent retrieves them, and then an analysis, prediction or planning agent produces the answer depending on the intent of the request.
+
+## Key Features
+- **Master agent orchestration**: Routes each request through prompt enhancement, data planning, data fetching and then analysis, prediction or planning, based on keywords and intent.
+- **Specialised analysts**: Separate analysts for net worth, credit, EPF, mutual funds, bank accounts and stocks, plus a market research agent that uses Google Search for context.
+- **Predictive and planning agents**: Forecast future scenarios (for example affordability and long-term targets) and build step-by-step financial action plans.
+- **Mock Fi MCP server in Go**: Serves dummy net worth, credit report, EPF, mutual fund, bank and stock data for more than twenty persona scenarios such as debt-heavy users, SIP investors and early retirement planners, with a simple phone-number login flow.
+- **React chat dashboard**: Chat interface with Google sign-in through Firebase, Firestore-backed data and Chart.js visualisations.
+- **Deployable agent**: Includes scripts to deploy the agent to Vertex AI Agent Engine and query it remotely.
+
+## Technologies Used
+- **Google Agent Development Kit (ADK)**: Defines the master agent and its sub-agents.
+- **Gemini 2.5 Pro and Flash**: Pro for orchestration and analysis, Flash for lighter steps such as prompt enhancement and planning.
+- **Python and Flask**: Agent application and API layer.
+- **Vertex AI Agent Engine**: Deployment target for the agent.
+- **Go**: Mock Fi MCP server with session-based dummy authentication.
+- **React, Vite, Material UI, Chart.js**: Frontend dashboard and charts.
+- **Firebase**: Google authentication, hosting configuration and Firestore.
+
+## Challenges and Learnings
+The main design challenge visible in the code is coordinating many LLM agents reliably. The master agent's instructions encode an explicit decision order so that each step hands structured output, such as a JSON data plan, to the next. Keeping the sub-agents narrow, with their own prompts and models, and separating data retrieval from analysis made the system easier to reason about. Integrating work from several repositories under hackathon time pressure also required agreeing on interfaces between the agents, the MCP mock server and the frontend.
+
+## Outcome
+PersonaFi was delivered as a working end-to-end prototype for the Google Agentic AI Day 2025 finale, combining agents, a mock data backend and a user-facing dashboard in one repository.

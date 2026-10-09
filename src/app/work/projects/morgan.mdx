@@ -1,0 +1,41 @@
+---
+title: "MORGAN: Planned Local-First Agentic AI Assistant"
+publishedAt: "2024-05-07"
+summary: "MORGAN (Multi-domain Operational Response and Guidance Assistant for Navigation) is a planned personal AI assistant that uses an LLM tool-calling loop to answer questions and act on the local machine. The repository currently contains the product spec and implementation plan; the application itself has not been built yet."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/MORGAN"
+---
+
+## Overview
+
+MORGAN is a design for a personal, local-first AI assistant with a web chat interface. Rather than matching input against a fixed list of hand-coded commands, it is specified as an agentic system: an LLM tool-calling loop that decides for itself when to answer directly and when to use a tool such as a shell command, a file operation, a web search, or a memory lookup.
+
+Status: this project is at the planning stage. The repository holds a PRD, an implementation plan, a progress log, and a placeholder `main.py` that only prints a greeting. No agent, UI, or tools have been implemented yet, and this page describes the intended design rather than shipped functionality.
+
+## Key Features
+
+- **Agentic tool loop (planned)**: the server sends the conversation and a tool schema to the active LLM, executes any requested tool, feeds the result back, and repeats until a final answer is produced.
+- **Local automation (planned)**: open applications and run shell commands, with an explicit confirmation step before anything destructive.
+- **File operations (planned)**: create, move, search, and read files and folders on request.
+- **Persistent memory (planned)**: conversation history and learned facts stored locally and recalled across sessions.
+- **Web search (planned)**: look up and summarize current information.
+- **Swappable LLM providers (planned)**: Gemini API as the primary provider and Ollama for local/offline use, behind one interface selected by configuration.
+
+## Technologies Used
+
+- **Next.js and React**: planned single app serving both the chat UI and the server-side agent endpoint.
+- **Gemini API and Ollama**: planned LLM providers behind a common tool-calling interface.
+- **Python**: only the placeholder entry point exists today.
+
+## Challenges and Learnings
+
+The documentation focuses on the hard parts of an agentic assistant: keeping the Gemini key out of source control, making arbitrary shell execution safe through confirmation UX, keeping memory local, and achieving parity between a hosted model and a less capable local one. Writing the PRD, non-goals, success criteria and a milestone roadmap before coding was the main exercise so far.
+
+## Outcome
+
+The project is in the pre-implementation phase, with a six-milestone roadmap from scaffolding the Next.js app through Ollama support. Nothing has been demoed or deployed yet.

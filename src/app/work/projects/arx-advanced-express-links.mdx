@@ -1,0 +1,46 @@
+---
+title: "AXL: Advanced eXpress Links URL Shortener"
+publishedAt: "2026-09-30"
+summary: "A production URL shortener with Redis-cached redirects, batched click counting and per-user accounts, built on Next.js and Supabase. An Arx Studios project."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Founder & Lead Developer, Arx Studios"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://axl.arxstudios.pro"
+---
+
+## Overview
+
+AXL (Advanced eXpress Links) is a URL shortener by Arx Studios, served at `axl.arxstudios.pro/<code>`. It began as a step-by-step system-design learning build on Fastify, then was converted to a Next.js application with sign-in, a dashboard and a production deployment.
+
+Users sign in with their Arx Studios account, create and manage short links in a dashboard, and anyone can follow a short code to be redirected to the destination.
+
+## Key Features
+
+- **Fast redirects**: cache-aside lookups in Redis with a 24-hour TTL and negative caching for unknown codes, falling back to Postgres on a miss.
+- **Buffered click counts**: clicks are incremented in Redis after the redirect is sent and flushed to Postgres in batches under a short lock.
+- **Per-user links**: Supabase Auth (Google or email link); shortening the same URL twice returns the same code, and deletions are soft so codes are never reused.
+- **Rate limiting**: 10 new links per minute per user using a Redis fixed window.
+- **JSON API**: create, list (cursor pagination), fetch and delete endpoints for signed-in users.
+- **Operations**: health endpoint and a daily keep-alive cron, plus SQL migrations and a documentation set covering architecture, security and a runbook.
+
+## Technologies Used
+
+- **Next.js 16 (App Router), React 19, TypeScript**: UI, route handlers and redirects.
+- **Postgres (Supabase)**: durable link storage.
+- **Redis/Valkey (Render) via ioredis**: caching, rate limiting and click buffering.
+- **Supabase Auth**: sign-in and session verification.
+- **Zod**: input validation.
+- **Three.js, GSAP, Framer Motion, Tailwind CSS**: shader background and animated UI.
+- **Vitest and Docker Compose**: integration tests against local Postgres and Redis.
+- **Vercel**: hosting.
+
+## Challenges and Learnings
+
+The project history documents the main design problems: keeping redirects fast without losing click data, which led to the Redis cache and batched flush; making deduplication race-free with a partial unique index on a URL hash; and avoiding code reuse through soft deletes. Deploying across Vercel, Supabase and Render also required a scheduled keep-alive to stop free-tier services from idling.
+
+## Outcome
+
+A deployed, documented service with a real caching and data-flow design, tests and operational tooling, showing end-to-end ownership from system design to production.

@@ -1,0 +1,38 @@
+---
+title: "ArtificialLife: Neuroevolution Sandbox in Unity"
+publishedAt: "2026-08-30"
+summary: "A Unity simulation where organisms with small neural-network brains forage for food and evolve over generations through selection and mutation, with no scripted behavior."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Simulation and Game Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/ArtificialLife"
+---
+
+## Overview
+ArtificialLife is an artificial-life sandbox built in Unity 6. Simple organisms live in a flat world, sense it through directional rays, decide using a small feed-forward neural network, and evolve across generations. The guiding design rule from the README is not to program intelligence when evolution can discover it: the environment supplies selection pressure and behaviors such as foraging are expected to emerge.
+
+Each tick an organism senses (eight normalized inputs: five food-proximity rays, its energy, its age, and the nearest organism ahead), runs an 8 to 6 to 3 tanh network, and acts by steering, throttling and gating eating. Energy drains through metabolism and movement; organisms die when energy runs out or they exceed their lifespan.
+
+## Key Features
+- **Neural-network brains**: Pure C# `NeuralNetwork`, `Layer` and activation classes with no MonoBehaviour dependency, covered by EditMode tests.
+- **Genetic algorithm**: Genome, mutation, tournament and roulette selection, and an `EvolutionManager` that tracks generations and per-generation statistics.
+- **Deterministic runs**: A seeded RNG and a fixed-tick simulation clock make a run reproducible from its seed.
+- **Tunable settings**: A `SimulationSettings` ScriptableObject holds seed, population, energy economy, mutation rates and fitness weights.
+- **Persistence**: Population state is saved to and loaded from JSON in the persistent data path.
+- **Runtime UI**: A UI Toolkit controller and stylesheet for the simulation HUD.
+
+## Technologies Used
+- **Unity 6 and C#**: Simulation, scene and tooling.
+- **UI Toolkit (USS)**: In-simulation interface.
+- **ScriptableObjects**: Configuration of all simulation parameters.
+- **Unity Test Framework**: EditMode tests for the neural network.
+- **JsonUtility**: Saving the evolved population.
+
+## Challenges and Learnings
+The code shows deliberate engineering around reproducibility: transform-based motion instead of physics, a single fixed-step tick rather than scattered Update logic, and one seeded RNG used everywhere instead of UnityEngine.Random. It also separates the network (plain serializable data) from the scene objects, and treats network weights directly as the genome, so there is no backpropagation. Note that the README's milestone table is behind the code, which already contains selection, evolution management, stats, a save system and UI.
+
+## Outcome
+A working, well-structured evolution prototype of roughly 50 KB of C#. No hackathon or submission context is stated.

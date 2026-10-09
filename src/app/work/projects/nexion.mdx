@@ -1,0 +1,39 @@
+---
+title: "NEXION: Cyberpunk Dual-Mode Puzzle Adventure"
+publishedAt: "2026-08-25"
+summary: "A story-driven cyberpunk puzzle game in Unity 6 and HDRP built around a human versus CPU dual-mode mechanic, developed as a final year capstone."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Game Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/NEXION"
+---
+
+## Overview
+NEX//ION is a first-person cyberpunk puzzle-adventure game set in a digital world hit by a system corruption, exploring themes of AI consciousness and digital identity. It is the final year capstone project for a B.Tech in Computer Science (Gaming) at VIT Bhopal University, with final submission planned for March 2027. The project docs mark it as pre-production, and the repository is an early vertical slice of the core systems.
+
+Its central mechanic is a dual-mode system: holding one key puts the player in H-MODE (human perception) and another in C-MODE (CPU perception). Puzzles such as hacking terminals are only readable in C-MODE, and C-MODE also adds input lag as a trade-off.
+
+## Key Features
+- **Dual-mode controller**: `ModeController` owns the current mode, applies a configurable 0.5 second switch delay and broadcasts mode-change events.
+- **Mode visuals**: `ModeVisualController` crossfades two HDRP Volume profiles when the mode changes.
+- **First-person player**: CharacterController-based movement and look, plus a health and shield lifecycle with death and respawn, a viewmodel and a HUD binder.
+- **Interaction system**: An `IInteractable` interface and a camera-raycast interactor.
+- **Puzzles**: A command-line terminal puzzle (`scan`, `bypass` with a code) and a numeric keypad puzzle, both gated to C-MODE and wired with UnityEvents.
+- **UI Toolkit screens**: UXML and USS interfaces for the terminal and keypad.
+- **Design documentation**: A docs folder with a roadmap, progress log, visual design spec and a 23-puzzle content spec.
+
+## Technologies Used
+- **Unity 6 (6000.5) and C#**: Gameplay systems.
+- **HDRP 17.5**: Rendering and mode-specific Volume profiles.
+- **Input System package**: Direct keyboard, mouse and gamepad reads.
+- **UI Toolkit**: Terminal and keypad interfaces.
+- **AFPC Lifecycle**: Health, shield and respawn handling.
+
+## Challenges and Learnings
+The progress log records an honest course correction: the synopsis specified URP, but the project is actually HDRP, so visual work targets HDRP Volumes. The code uses an event-driven design where visuals, player and puzzles subscribe to the mode controller instead of polling it. Some features are explicitly unfinished, such as checkpoints and the hybrid puzzle that depends on a memory-fragment system.
+
+## Outcome
+An in-progress capstone with the core mechanic, interaction and two puzzle types working. Per the project docs it is intended to be presentable at the India Game Developer Conference.

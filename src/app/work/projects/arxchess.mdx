@@ -1,0 +1,45 @@
+---
+title: "ArxChess: A Full-Featured Chess Platform"
+publishedAt: "2026-09-26"
+summary: "A Next.js chess platform with local play, Stockfish AI, analysis, puzzles, engine-vs-engine arena and real-time online rooms. An Arx Studios project."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Founder & Lead Developer, Arx Studios"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/arx-studios/arxchess"
+---
+
+## Overview
+
+ArxChess is an Arx Studios chess platform covering several ways to play: local pass-and-play, play against Stockfish, an analysis board, puzzles, engine-versus-engine arena battles and online multiplayer. The interface is skinned to feel like a mainstream chess site, with selectable board and piece themes.
+
+It is an early-stage project (first commits in late September 2026) and is not deployed publicly; the repository README notes the third-party board artwork should be replaced before any public deployment.
+
+## Key Features
+
+- **Play vs Stockfish**: Stockfish 19 compiled to WebAssembly runs in a Web Worker in the browser, with no server-side engine.
+- **Arena mode**: two independent engine instances play each other.
+- **Analysis board**: engine evaluation with an eval bar and principal variation parsing.
+- **Online multiplayer**: a standalone Node WebSocket server hosts in-memory rooms joined by shared link, with server-tracked clocks and resignation.
+- **Verified puzzles**: a generator script checks every move is legal, replies are forced and the final position is mate before publishing the set.
+- **Themes, settings and sound**: dozens of board and piece sets, dark and light tokens, and a sound system wired for per-event audio files.
+
+## Technologies Used
+
+- **Next.js (App Router), React and TypeScript**: application framework.
+- **Tailwind CSS**: styling with design tokens.
+- **chess.js**: move legality and game state.
+- **Chessground**: board rendering.
+- **Stockfish (WASM)**: engine in Web Workers.
+- **Zustand**: separate game stores per mode.
+- **ws (Node WebSockets)**: multiplayer server.
+
+## Challenges and Learnings
+
+The code shows a clear separation between rules (chess.js), engine communication (a small UCI client that parses `info` and `bestmove` lines) and per-mode state stores. Running the engine in a worker avoids needing special server headers, and the typed client/server message protocol keeps the multiplayer layer simple. Known limits are documented honestly: rooms are in-memory, there are no accounts, sounds ship empty and the puzzle set is a small mate-in-1 starter pack.
+
+## Outcome
+
+A working multi-mode chess application that demonstrates browser-side engine integration, real-time networking and a themeable UI, with a clear path toward accounts and a larger puzzle library.

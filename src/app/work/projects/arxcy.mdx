@@ -1,0 +1,38 @@
+---
+title: "ArxCy: A Beginner-Friendly Language That Transpiles to C"
+publishedAt: "2025-08-13"
+summary: "A small statically typed, C-like programming language for beginners, implemented as a C++ transpiler using ANTLR4 that generates standard C code."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/ArxCy"
+---
+
+## Overview
+ArxCy is an educational programming language aimed at beginners, together with a transpiler that turns `.arx` source files into standard C. The grammar is defined in ANTLR4 and a custom C++ visitor walks the parse tree to emit C code, which can then be compiled with gcc.
+
+The project is a practical exercise in compiler construction: lexing, parsing, type tracking and code generation.
+
+## Key Features
+- **Static types**: `int`, `flt`, `char`, `bool` and `str`.
+- **Control flow**: `if` with `then`, `else-if` and `else`, plus `for`, `while` and `do-while` loops.
+- **Arrays**: Declaration with literals, indexing and a `.length` property.
+- **Functions**: Declared with the `func` keyword, with typed parameters and `return`.
+- **Expressions**: Arithmetic, logical and comparison operators with proper precedence, increment and decrement, and assignment.
+- **Built-in print**: A `print()` function with simple string concatenation.
+- **Test programs**: Sample `.arx` files exercise the implemented features.
+
+## Technologies Used
+- **C++17**: Transpiler entry point and code generator.
+- **ANTLR4 and its C++ runtime**: Grammar definition, generated lexer and parser, and visitor base classes.
+- **CMake**: Build system.
+- **C**: Target language of the generated output.
+
+## Challenges and Learnings
+The code generator keeps maps of variable types and array sizes so that it can pick the right C types and implement the `.length` property, since C arrays do not carry their length. Writing the grammar as layered expression rules (assignment, logical, equality, comparison, term, factor, unary, postfix) shows how operator precedence is encoded in a parser. The README describes the language as simple and educational, and a full semantic checker is not part of the repository.
+
+## Outcome
+A working end-to-end transpiler from ArxCy to C, published under the MIT License with build instructions and example programs.

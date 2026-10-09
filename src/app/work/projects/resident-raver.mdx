@@ -1,0 +1,36 @@
+---
+title: "Resident Raver: A Zombie Platformer on ImpactJS"
+publishedAt: "2026-08-14"
+summary: "A side-scrolling zombie platformer built with the ImpactJS engine for an academic project, featuring a gun, bouncing grenades and a Weltmeister-designed level."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Game Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/ResidentRaver"
+---
+
+## Overview
+Resident Raver is a classic side-scrolling platformer built with the ImpactJS game engine for an academic project. The player controls an unnamed hero escaping a college dorm overrun by raver zombies, navigating platforms while using weapons to survive.
+
+The game runs in the browser from `index.html`, with levels designed in ImpactJS's Weltmeister editor.
+
+## Key Features
+- **Platformer physics**: Ground and air acceleration, jump strength and friction tuned in the player entity.
+- **Two weapons**: A gun firing fast bullets and a grenade that is thrown in an arc, bounces up to three times and explodes for heavy damage. TAB switches between them.
+- **Zombie AI**: Zombies patrol, turn around at ledges and walls using the collision map, and damage the player on contact.
+- **Death and respawn**: A particle explosion plays on death, followed by a respawn with a short invincibility window.
+- **Level editor workflow**: Maps such as `dorm1` are built and saved with Weltmeister.
+
+## Technologies Used
+- **JavaScript (ImpactJS)**: Engine and entity system for gameplay, collision and animation.
+- **Weltmeister**: Visual level and entity editor bundled with ImpactJS.
+- **PHP**: Backend scripts that let the editor save level files.
+- **HTML and CSS**: Page shell and canvas.
+
+## Challenges and Learnings
+The code shows work with an entity-based engine: separating player and enemy collision types (friendly versus hostile), implementing edge and wall detection through the collision map, and building particle effects for deaths and explosions. Using the level editor also required running a local PHP-enabled web server.
+
+## Outcome
+A playable browser platformer with one dorm level, two weapons and basic enemy AI, completed as an academic project. The README notes that sprite and sound assets must be copied from the engine's book example files.

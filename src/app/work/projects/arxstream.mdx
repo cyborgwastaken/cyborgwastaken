@@ -1,0 +1,40 @@
+---
+title: "arxstream: A Two-Person Watch Party"
+publishedAt: "2026-08-01"
+summary: "A Node.js web app where two people watch the same uploaded video in sync, with chat and peer-to-peer webcam."
+images: []
+team:
+  - name: "Ayushman Das"
+    role: "Full-Stack Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayuxcyb"
+link: "https://github.com/cyborgwastaken/arxstream"
+---
+
+## Overview
+arxstream is a two-person watch party. One user uploads a video (or gives a direct link), and both people see the same playhead, a chat sidebar and each other's webcam. A small Express and WebSocket server keeps both clients aligned.
+
+The server holds the authoritative playhead, so someone who joins late or reconnects lands at the right position, and playback drift is corrected silently every few seconds.
+
+## Key Features
+- **Browser upload**: Drag and drop a file or use the toolbar; it streams to disk with a progress bar and loads on both screens.
+- **Server-side link download**: Paste a direct video URL and the server fetches it, with progress shared and cancellable by either person.
+- **Synced playback**: Play, pause, seek and file selection propagate between viewers, with a resync control.
+- **Chat**: WebSocket chat that replays the last 50 messages on join.
+- **Webcam and mic**: Peer-to-peer WebRTC, with the server only relaying signaling.
+- **Room controls**: Limited to two participants, with an optional room password and keyboard shortcuts.
+- **Deployment ready**: Includes a `render.yaml` and a health check endpoint for Render.
+
+## Technologies Used
+- **Node.js (20 or later)**: Server runtime.
+- **Express**: HTTP API for uploads, video listing, link fetching and deletion.
+- **ws**: WebSocket server for chat, sync and signaling.
+- **WebRTC**: Direct webcam and microphone streaming between the two peers.
+- **Vanilla JavaScript, HTML and CSS**: Front-end client with no framework.
+- **Render**: Hosting target configured via `render.yaml`.
+
+## Challenges and Learnings
+The server design centers on keeping a single source of truth for playback state and reconciling it with two clients over unreliable connections. The README also documents real deployment constraints: ephemeral disk on free hosting, request timeouts on large uploads, browser audio codec limits for MKV files, and the lack of a TURN server for strict NATs.
+
+## Outcome
+A working, deployable watch-party app with clear documentation of its limits and setup steps.
