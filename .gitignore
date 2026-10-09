@@ -37,3 +37,6 @@ yarn-error.log*
 next-env.d.ts
 # python
 __pycache__/
+
+# motion-reel project sources (only the exported SVG is committed)
+/videos
