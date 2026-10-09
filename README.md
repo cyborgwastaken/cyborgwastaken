@@ -26,7 +26,7 @@ board, usually in under a minute.
 <p align="center"><img src="profile/chess/board.svg?v=1-2" width="440" alt="current chess board"></p>
 
 <p align="center"><b>Game #1 · move 2 · you're White, your move.</b><br />
-<sub>Stockfish (skill 4/20) plays Black and replies instantly. Last turn: [@cyborgwastaken](https://github.com/cyborgwastaken) played `e4`, Stockfish replied `d5`.</sub></p>
+<sub>Stockfish (skill 4/20) plays Black and replies instantly. Last turn: <a href="https://github.com/cyborgwastaken">@cyborgwastaken</a> played <code>e4</code>, Stockfish replied <code>d5</code>.</sub></p>
 
 <details>
 <summary><b>♟️ Make a move</b>: 31 legal moves. Click one, then hit <i>Submit new issue</i>.</summary>

@@ -163,7 +163,9 @@ def render(state: dict) -> None:
     last_line = ""
     if len(state["moves"]) >= 2:
         h, s = state["moves"][-2], state["moves"][-1]
-        last_line = f" Last turn: [@{h['by']}](https://github.com/{h['by']}) played `{h['san']}`, Stockfish replied `{s['san']}`."
+        # inside an HTML block, so this has to be HTML rather than markdown
+        last_line = (f' Last turn: <a href="https://github.com/{h["by"]}">@{h["by"]}</a> played <code>{h["san"]}</code>, '
+                     f'Stockfish replied <code>{s["san"]}</code>.')
     turn_text = "check! " if board.is_check() else ""
     version = f"{state['game']}-{len(state['moves'])}"
 
