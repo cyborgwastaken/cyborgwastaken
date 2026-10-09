@@ -11,7 +11,11 @@ import json
 import os
 import urllib.request
 from pathlib import Path
+import sys
 from xml.sax.saxutils import escape
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from term import frame, overlay, reveal, typed  # noqa: E402
 
 USER, ORG = "cyborgwastaken", "arx-studios"
 OUT = Path(__file__).with_name("telemetry.svg")
@@ -83,10 +87,9 @@ def main() -> None:
     top = sorted(langs.items(), key=lambda kv: -kv[1][0])[:7]
     total_bytes = sum(v[0] for _, v in top) or 1
 
-    W, H = 880, 338
+    W, H, DY = 880, 338 + 34, 34  # DY: room for the terminal title bar + prompt
     s: list[str] = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
-        f'aria-label="GitHub telemetry: {cal["totalContributions"]} contributions in the last year">',
+        frame(W, H, "ayushman@arx-studios: ~ — gh telemetry"),
         f"""<style>
   text {{ font-family: {MONO}; fill: {TEXT}; }}
   .k {{ font-size: 11px; fill: {DIM}; letter-spacing: 1.2px; }}
@@ -100,12 +103,13 @@ def main() -> None:
   .pulse {{ animation: pulse 2s ease-in-out infinite; }}
   @keyframes pulse {{ 50% {{ opacity: .25; }} }}
 </style>""",
-        f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="{BG}" stroke="{BORDER}"/>',
-        f'<circle cx="28" cy="27" r="4.5" fill="#22c55e" class="pulse"/>',
-        f'<text x="42" y="31" style="font-size:12.5px"><tspan fill="{CYAN}" font-weight="700">telemetry</tspan>'
-        f'<tspan fill="{DIM}">  ·  github.com/{USER} + github.com/{ORG}  ·  refreshed {dt.date.today():%d %b %Y}</tspan></text>',
-        f'<line x1="20" y1="46" x2="{W - 20}" y2="46" stroke="{BORDER}"/>',
     ]
+    s.append(f'<text x="36" y="70" class="prompt" opacity="0">${reveal(0.2)}</text>')
+    end = typed(s, "gh telemetry --live", 52, 70, 0.25, "tp")
+    s.append(f'<text x="{52 + 22 * 7.8:.1f}" y="70" class="dim" opacity="0"># {USER} + {ORG} · refreshed '
+             f'{dt.date.today():%d %b %Y}{reveal(end)}</text>')
+    s.append(f'<circle cx="{W - 40}" cy="66" r="4.5" fill="#22c55e" class="pulse"/>')
+    s.append(f'<g transform="translate(0 {DY + 12})">')
 
     # stat tiles
     tiles = [
@@ -154,7 +158,8 @@ def main() -> None:
         s.append(f'<text x="{lx + 15}" y="{ly}" class="lg">{escape(label)}</text>')
         lx += 15 + len(label) * 7.1 + 22
 
-    s.append("</svg>")
+    s.append("</g>")
+    s.append(overlay(W, H))
     OUT.write_text("\n".join(s), encoding="utf-8")
     print(f"wrote {OUT.name}: {cal['totalContributions']} contributions, {len(repos)} repos, {stars} stars")
 

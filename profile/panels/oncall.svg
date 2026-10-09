@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="268" viewBox="0 0 880 268" role="img" aria-label="ayushman@arx-studios: ~ — zsh">
+<defs>
+  <style>
+text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; font-size: 13px; fill: #cbd5e1; white-space: pre; }
+.dim { fill: #64748b; } .cy { fill: #22d3ee; } .deep { fill: #0e7490; } .ok { fill: #22c55e; font-weight: 700; }
+.warn { fill: #f59e0b; font-weight: 700; } .red { fill: #ef4444; } .vi { fill: #a78bfa; }
+.b { fill: #f1f5f9; font-weight: 700; } .prompt { fill: #22d3ee; font-weight: 700; }
+.title { fill: #64748b; font-size: 12px; } .big { fill: #f1f5f9; font-size: 17px; font-weight: 700; }
+</style>
+  <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" opacity=".035"/></pattern>
+  <radialGradient id="vignette" cx="50%" cy="45%" r="75%">
+    <stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/>
+  </radialGradient>
+  <filter id="glow" x="-10%" y="-40%" width="120%" height="180%">
+    <feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect x=".5" y=".5" width="879" height="267" rx="14" fill="#0a0e14" stroke="#1e293b"/>
+<path d="M14.5 .5h851a14 14 0 0 1 14 14v21.5H.5V14.5a14 14 0 0 1 14-14z" fill="#0f141c"/>
+<line x1=".5" y1="36" x2="879.5" y2="36" stroke="#1e293b"/>
+<circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="18" r="6" fill="#febc2e"/>
+<circle cx="62" cy="18" r="6" fill="#28c840"/>
+<text x="440.0" y="22" text-anchor="middle" class="title">ayushman@arx-studios: ~ — zsh</text>
+<text x="36" y="70" class="prompt" opacity="0">$<set attributeName="opacity" to="1" begin="0.25s" fill="freeze"/></text>
+<clipPath id="c0"><rect x="52" y="56" width="0" height="20"><animate attributeName="width" values="0.0;7.8;15.6;23.4;31.2;39.0;46.8;54.6;62.4;70.2;78.0;85.8;93.6;101.4;109.2;117.0;124.8;132.6;140.4" begin="0.25s" dur="0.45s" calcMode="discrete" fill="freeze"/></rect></clipPath><text x="52" y="70" clip-path="url(#c0)">cat ~/.oncall.yaml</text>
+<text x="36" y="92" opacity="0"><tspan class="cy">on_call</tspan><tspan class="dim">: </tspan><tspan class="b">ayushman</tspan><set attributeName="opacity" to="1" begin="0.80s" fill="freeze"/></text>
+<text x="36" y="114" opacity="0"><tspan class="cy">timezone</tspan><tspan class="dim">: </tspan>Asia/Kolkata<tspan class="dim">  # IST, UTC+5:30</tspan><set attributeName="opacity" to="1" begin="0.88s" fill="freeze"/></text>
+<text x="36" y="136" opacity="0"><tspan class="cy">escalation</tspan><tspan class="dim">:</tspan><set attributeName="opacity" to="1" begin="0.96s" fill="freeze"/></text>
+<text x="36" y="158" opacity="0"><tspan class="dim">  - </tspan><tspan class="vi">sev3</tspan><tspan class="dim">: </tspan>open an issue on any repo                 <tspan class="dim"># I read them</tspan><set attributeName="opacity" to="1" begin="1.04s" fill="freeze"/></text>
+<text x="36" y="180" opacity="0"><tspan class="dim">  - </tspan><tspan class="vi">sev2</tspan><tspan class="dim">: </tspan>linkedin.com/in/ayuxcyb                   <tspan class="dim"># roles, internships, collabs</tspan><set attributeName="opacity" to="1" begin="1.12s" fill="freeze"/></text>
+<text x="36" y="202" opacity="0"><tspan class="dim">  - </tspan><tspan class="vi">sev1</tspan><tspan class="dim">: </tspan>ayushmandas.dudul@gmail.com               <tspan class="dim"># important? I'll reply</tspan><set attributeName="opacity" to="1" begin="1.20s" fill="freeze"/></text>
+<text x="36" y="224" opacity="0"><tspan class="dim">  - </tspan><tspan class="warn">sev0</tspan><tspan class="dim">: </tspan>a game idea or a gnarly backend problem   <tspan class="dim"># page immediately</tspan><set attributeName="opacity" to="1" begin="1.28s" fill="freeze"/></text>
+<text x="36" y="246" opacity="0"><tspan class="cy">open_to</tspan><tspan class="dim">: </tspan><tspan class="dim">[</tspan><tspan class="ok">backend, platform / SRE, observability, game dev</tspan><tspan class="dim">]</tspan><set attributeName="opacity" to="1" begin="1.36s" fill="freeze"/></text>
+
+<rect x="1" y="37" width="878" height="230" fill="url(#scan)"/><rect x="1" y="1" width="878" height="266" rx="14" fill="url(#vignette)"/></svg>

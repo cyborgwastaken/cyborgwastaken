@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="510" viewBox="0 0 880 510" role="img" aria-label="ayushman@arx-studios: ~ — zsh">
+<defs>
+  <style>
+text { font-family: ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; font-size: 13px; fill: #cbd5e1; white-space: pre; }
+.dim { fill: #64748b; } .cy { fill: #22d3ee; } .deep { fill: #0e7490; } .ok { fill: #22c55e; font-weight: 700; }
+.warn { fill: #f59e0b; font-weight: 700; } .red { fill: #ef4444; } .vi { fill: #a78bfa; }
+.b { fill: #f1f5f9; font-weight: 700; } .prompt { fill: #22d3ee; font-weight: 700; }
+.title { fill: #64748b; font-size: 12px; } .big { fill: #f1f5f9; font-size: 17px; font-weight: 700; }
+</style>
+  <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" opacity=".035"/></pattern>
+  <radialGradient id="vignette" cx="50%" cy="45%" r="75%">
+    <stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/>
+  </radialGradient>
+  <filter id="glow" x="-10%" y="-40%" width="120%" height="180%">
+    <feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect x=".5" y=".5" width="879" height="509" rx="14" fill="#0a0e14" stroke="#1e293b"/>
+<path d="M14.5 .5h851a14 14 0 0 1 14 14v21.5H.5V14.5a14 14 0 0 1 14-14z" fill="#0f141c"/>
+<line x1=".5" y1="36" x2="879.5" y2="36" stroke="#1e293b"/>
+<circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="18" r="6" fill="#febc2e"/>
+<circle cx="62" cy="18" r="6" fill="#28c840"/>
+<text x="440.0" y="22" text-anchor="middle" class="title">ayushman@arx-studios: ~ — zsh</text>
+<text x="36" y="70" class="prompt" opacity="0">$<set attributeName="opacity" to="1" begin="0.25s" fill="freeze"/></text>
+<clipPath id="c0"><rect x="52" y="56" width="0" height="20"><animate attributeName="width" values="0.0;7.8;15.6;23.4;31.2;39.0;46.8;54.6;62.4;70.2;78.0;85.8;93.6;101.4" begin="0.25s" dur="0.33s" calcMode="discrete" fill="freeze"/></rect></clipPath><text x="52" y="70" clip-path="url(#c0)">cat about.txt</text>
+<text x="36" y="92" opacity="0">I keep production boring so the product can be exciting.<set attributeName="opacity" to="1" begin="0.67s" fill="freeze"/></text>
+<text x="36" y="114" opacity="0">By day I build observability and reliability tooling for a live cybersecurity GRC platform<set attributeName="opacity" to="1" begin="0.74s" fill="freeze"/></text>
+<text x="36" y="136" opacity="0">at Cyberpal.ai. After hours I run Arx Studios, where I write compilers, ship web products<set attributeName="opacity" to="1" begin="0.81s" fill="freeze"/></text>
+<text x="36" y="158" opacity="0">and build games.<set attributeName="opacity" to="1" begin="0.89s" fill="freeze"/></text>
+<text x="36" y="202" class="prompt" opacity="0">$<set attributeName="opacity" to="1" begin="0.96s" fill="freeze"/></text>
+<clipPath id="c6"><rect x="52" y="188" width="0" height="20"><animate attributeName="width" values="0.0;7.8;15.6;23.4;31.2;39.0;46.8;54.6;62.4;70.2;78.0;85.8;93.6;101.4;109.2;117.0;124.8;132.6;140.4;148.2;156.0;163.8;171.6;179.4;187.2;195.0;202.8;210.6;218.4;226.2;234.0" begin="0.96s" dur="0.75s" calcMode="discrete" fill="freeze"/></rect></clipPath><text x="52" y="202" clip-path="url(#c6)">journalctl -u career --reverse</text>
+<text x="309.4" y="202" class="dim" opacity="0"># most recent first<set attributeName="opacity" to="1" begin="1.71s" fill="freeze"/></text>
+<text x="36" y="224" opacity="0"><tspan class="dim">Feb 2026 → now  </tspan><tspan class="cy">cyberpal.ai  </tspan><tspan class="b">Software Development Intern · Technology Crest Corporation</tspan><set attributeName="opacity" to="1" begin="1.81s" fill="freeze"/></text>
+<text x="36" y="246" opacity="0">                <tspan class="deep">› </tspan>observability console streaming live stdout/stderr over WebSockets<set attributeName="opacity" to="1" begin="1.88s" fill="freeze"/></text>
+<text x="36" y="268" opacity="0">                <tspan class="deep">› </tspan>Prometheus metrics + Pino logs; alerts on heap, event-loop lag, error rate, p99<set attributeName="opacity" to="1" begin="1.95s" fill="freeze"/></text>
+<text x="36" y="290" opacity="0">                <tspan class="deep">› </tspan>distributed tracing with correlation IDs, automatic secret redaction in logs<set attributeName="opacity" to="1" begin="2.02s" fill="freeze"/></text>
+<text x="36" y="312" opacity="0"><tspan class="dim">May–Jun 2025    </tspan><tspan class="cy">drdo-pxe     </tspan><tspan class="b">R&amp;D Intern · Defence Research &amp; Development Organisation</tspan><set attributeName="opacity" to="1" begin="2.08s" fill="freeze"/></text>
+<text x="36" y="334" opacity="0">                <tspan class="deep">› </tspan>built and deployed DRAD-MS and BLADEngine in a secure, access-controlled environment<set attributeName="opacity" to="1" begin="2.15s" fill="freeze"/></text>
+<text x="36" y="356" opacity="0">                <tspan class="deep">› </tspan>automated provisioning; killed recurring errors in the trajectory-tracking pipeline<set attributeName="opacity" to="1" begin="2.22s" fill="freeze"/></text>
+<text x="36" y="378" opacity="0"><tspan class="dim">May–Jun 2024    </tspan><tspan class="cy">vit-serb     </tspan><tspan class="b">Project Assistant · DST-SERB CRG research project</tspan><set attributeName="opacity" to="1" begin="2.29s" fill="freeze"/></text>
+<text x="36" y="400" opacity="0">                <tspan class="deep">› </tspan>PyMOL/OpenGL molecular visualisation for Gaussian, GAMESS, NWChem and MOPAC<set attributeName="opacity" to="1" begin="2.36s" fill="freeze"/></text>
+<text x="36" y="444" class="prompt" opacity="0">$<set attributeName="opacity" to="1" begin="2.43s" fill="freeze"/></text>
+<clipPath id="c17"><rect x="52" y="430" width="0" height="20"><animate attributeName="width" values="0.0;7.8;15.6;23.4;31.2;39.0;46.8;54.6;62.4;70.2;78.0;85.8;93.6;101.4;109.2;117.0;124.8;132.6" begin="2.43s" dur="0.42s" calcMode="discrete" fill="freeze"/></rect></clipPath><text x="52" y="444" clip-path="url(#c17)">cat education.txt</text>
+<text x="36" y="466" opacity="0"><tspan class="dim">2023–2027       </tspan><tspan class="b">B.Tech CS&amp;E</tspan> · VIT Bhopal · <tspan class="ok">CGPA 8.80</tspan><set attributeName="opacity" to="1" begin="2.96s" fill="freeze"/></text>
+<text x="36" y="488" opacity="0"><tspan class="dim">2024–2028       </tspan><tspan class="b">BS Data Science &amp; Applications</tspan> · IIT Madras (online)<set attributeName="opacity" to="1" begin="3.03s" fill="freeze"/></text>
+
+<rect x="1" y="37" width="878" height="472" fill="url(#scan)"/><rect x="1" y="1" width="878" height="508" rx="14" fill="url(#vignette)"/></svg>
