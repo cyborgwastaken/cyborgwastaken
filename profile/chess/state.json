@@ -1,11 +1,24 @@
 {
   "game": 1,
-  "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-  "moves": [],
+  "fen": "rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+  "moves": [
+    {
+      "by": "cyborgwastaken",
+      "uci": "e2e4",
+      "san": "e4"
+    },
+    {
+      "by": "stockfish",
+      "uci": "d7d5",
+      "san": "d5"
+    }
+  ],
   "record": {
     "visitors": 0,
     "stockfish": 0,
     "draws": 0
   },
-  "players": {}
+  "players": {
+    "cyborgwastaken": 1
+  }
 }
