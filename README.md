@@ -48,7 +48,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/cyborgwastaken/arxstream"><img src="readme/cards/arxstream.svg" width="43%" alt="arxstream: two-person watch party" /></a>
+  <a href="https://github.com/cyborgwastaken/arxstream"><img src="readme/cards/arxstream.svg" width="43%" alt="arxstream: two-person watch party" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/arx-studios/clashex"><img src="readme/cards/clashex.svg" width="43%" alt="Clashex: Clash of Clans village tracker" /></a>
 </p>
 
 <br />
