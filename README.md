@@ -16,7 +16,7 @@
   <a href="https://axl.arxstudios.pro"><img src="readme/cards/axl.svg" width="49%" alt="AXL: URL shortener with Redis-cached redirects" /></a>
   <a href="https://chronovault-psi.vercel.app"><img src="readme/cards/chronovault.svg" width="49%" alt="ChronoVault: encrypted, sharded files on IPFS and Ethereum" /></a>
   <a href="https://macnook.vercel.app"><img src="readme/cards/macnook.svg" width="49%" alt="MacNook: Quick Look for folders" /></a>
-  <a href="https://github.com/arx-studios"><img src="readme/cards/arx.svg" width="49%" alt="Arx Studios" /></a>
+  <a href="https://github.com/arx-studios"><img src="readme/cards/arx.svg" width="49%" alt="ARX Studios" /></a>
 </p>
 
 <br />
@@ -37,18 +37,18 @@
 
 <br />
 
-<img src="readme/cards/h-languages.svg" width="100%" alt="Languages" />
+<img src="readme/cards/h-web.svg" width="100%" alt="ARX Studios" />
 
 <p align="center">
   <a href="https://github.com/arx-studios/arx-native-executable"><img src="readme/cards/anx.svg" width="43%" alt="ANX: a compiled language" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/cyborgwastaken/ArxCy"><img src="readme/cards/arxcy.svg" width="43%" alt="ArxCy: a language that transpiles to C" /></a>
 </p>
 
-<br />
-
-<img src="readme/cards/h-arx.svg" width="100%" alt="Arx Studios" />
-
 <p align="center">
   <a href="https://github.com/arx-studios/arxchess"><img src="readme/cards/arxchess.svg" width="43%" alt="ArxChess: chess platform" /></a>&nbsp;&nbsp;&nbsp;<a href="https://arx-killfeed.vercel.app"><img src="readme/cards/killfeed.svg" width="43%" alt="Arx Killfeed: Valorant codex" /></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/cyborgwastaken/arxstream"><img src="readme/cards/arxstream.svg" width="43%" alt="arxstream: two-person watch party" /></a>
 </p>
 
 <br />
@@ -59,13 +59,6 @@
   <a href="https://github.com/cyborgwastaken/PersonaFi"><img src="readme/cards/personafi.svg" width="43%" alt="PersonaFi: finalist, Google Agentic AI Day 2025" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/cyborgwastaken/AMDSlingshot"><img src="readme/cards/nutriquest.svg" width="43%" alt="NutriQuest: finalist, AMD Slingshot" /></a>
 </p>
 
-<br />
-
-<img src="readme/cards/h-fullstack.svg" width="100%" alt="Full stack" />
-
-<p align="center">
-  <a href="https://github.com/cyborgwastaken/arxstream"><img src="readme/cards/arxstream.svg" width="43%" alt="arxstream: two-person watch party" /></a>
-</p>
 
 <br />
 
