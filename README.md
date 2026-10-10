@@ -13,10 +13,10 @@
 <br />
 
 <p align="center">
+  <a href="https://arxstudios.pro"><img src="readme/cards/arx.svg" width="49%" alt="ARX Studios" /></a>
   <a href="https://axl.arxstudios.pro"><img src="readme/cards/axl.svg" width="49%" alt="AXL: URL shortener with Redis-cached redirects" /></a>
   <a href="https://chronovault.arxstudios.pro"><img src="readme/cards/chronovault.svg" width="49%" alt="ChronoVault: encrypted, sharded files on IPFS and Ethereum" /></a>
   <a href="https://macnook.arxstudios.pro"><img src="readme/cards/macnook.svg" width="49%" alt="MacNook: Quick Look for folders" /></a>
-  <a href="https://arxstudios.pro"><img src="readme/cards/arx.svg" width="49%" alt="ARX Studios" /></a>
 </p>
 
 <br />
