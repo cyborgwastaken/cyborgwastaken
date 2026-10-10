@@ -19,19 +19,54 @@
   <a href="https://github.com/arx-studios"><img src="readme/cards/arx.svg" width="49%" alt="Arx Studios" /></a>
 </p>
 
+<br />
+
+<img src="readme/cards/h-games.svg" width="100%" alt="Games" />
+
 <p align="center">
-  <a href="https://github.com/arx-studios/arx-native-executable"><img src="readme/cards/anx.svg" width="32%" alt="ANX: a compiled language" /></a>
-  <a href="https://github.com/cyborgwastaken/ArxCy"><img src="readme/cards/arxcy.svg" width="32%" alt="ArxCy: a language that transpiles to C" /></a>
-  <a href="https://github.com/arx-studios/arxchess"><img src="readme/cards/arxchess.svg" width="32%" alt="ArxChess: chess platform" /></a>
-  <a href="https://github.com/cyborgwastaken/PersonaFi"><img src="readme/cards/personafi.svg" width="32%" alt="PersonaFi: finalist, Google Agentic AI Day 2025" /></a>
-  <a href="https://github.com/cyborgwastaken/AMDSlingshot"><img src="readme/cards/nutriquest.svg" width="32%" alt="NutriQuest: finalist, AMD Slingshot" /></a>
-  <a href="https://arx-killfeed.vercel.app"><img src="readme/cards/killfeed.svg" width="32%" alt="Arx Killfeed: Valorant codex" /></a>
-  <a href="https://github.com/cyborgwastaken/NEXION"><img src="readme/cards/nexion.svg" width="32%" alt="NEXION: cyberpunk puzzle game" /></a>
-  <a href="https://play.unity.com/en/games/b84e5e1e-516c-47b0-a345-73aba7ed97eb/webbuild"><img src="readme/cards/doofus.svg" width="32%" alt="Doofus Adventure: playable in the browser" /></a>
-  <a href="https://github.com/cyborgwastaken/ArtificialLife"><img src="readme/cards/artificiallife.svg" width="32%" alt="ArtificialLife: neuroevolution sandbox" /></a>
-  <a href="https://github.com/cyborgwastaken/arxstream"><img src="readme/cards/arxstream.svg" width="32%" alt="arxstream: two-person watch party" /></a>
-  <a href="https://github.com/cyborgwastaken/Cy-Snake-AI"><img src="readme/cards/snake.svg" width="32%" alt="Cy-Snake-AI: reinforcement learning" /></a>
-  <a href="https://github.com/cyborgwastaken/PewPewWaves"><img src="readme/cards/pewpew.svg" width="32%" alt="Pew Pew Waves: wave shooter" /></a>
+  <a href="https://github.com/cyborgwastaken/NEXION"><img src="readme/cards/nexion.svg" width="43%" alt="NEXION: cyberpunk puzzle game" /></a>&nbsp;&nbsp;&nbsp;<a href="https://play.unity.com/en/games/b84e5e1e-516c-47b0-a345-73aba7ed97eb/webbuild"><img src="readme/cards/doofus.svg" width="43%" alt="Doofus Adventure: playable in the browser" /></a>
 </p>
+
+<p align="center">
+  <a href="https://github.com/cyborgwastaken/PewPewWaves"><img src="readme/cards/pewpew.svg" width="43%" alt="Pew Pew Waves: wave shooter" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/cyborgwastaken/TrajectoryTitans"><img src="readme/cards/trajectory.svg" width="43%" alt="Trajectory Titans: projectile physics game" /></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/cyborgwastaken/ArtificialLife"><img src="readme/cards/artificiallife.svg" width="43%" alt="ArtificialLife: neuroevolution sandbox" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/cyborgwastaken/ResidentRaver"><img src="readme/cards/residentraver.svg" width="43%" alt="Resident Raver: zombie platformer" /></a>
+</p>
+
+<br />
+
+<img src="readme/cards/h-languages.svg" width="100%" alt="Languages" />
+
+<p align="center">
+  <a href="https://github.com/arx-studios/arx-native-executable"><img src="readme/cards/anx.svg" width="43%" alt="ANX: a compiled language" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/cyborgwastaken/ArxCy"><img src="readme/cards/arxcy.svg" width="43%" alt="ArxCy: a language that transpiles to C" /></a>
+</p>
+
+<br />
+
+<img src="readme/cards/h-arx.svg" width="100%" alt="Arx Studios" />
+
+<p align="center">
+  <a href="https://github.com/arx-studios/arxchess"><img src="readme/cards/arxchess.svg" width="43%" alt="ArxChess: chess platform" /></a>&nbsp;&nbsp;&nbsp;<a href="https://arx-killfeed.vercel.app"><img src="readme/cards/killfeed.svg" width="43%" alt="Arx Killfeed: Valorant codex" /></a>
+</p>
+
+<br />
+
+<img src="readme/cards/h-ai.svg" width="100%" alt="AI" />
+
+<p align="center">
+  <a href="https://github.com/cyborgwastaken/PersonaFi"><img src="readme/cards/personafi.svg" width="43%" alt="PersonaFi: finalist, Google Agentic AI Day 2025" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/cyborgwastaken/AMDSlingshot"><img src="readme/cards/nutriquest.svg" width="43%" alt="NutriQuest: finalist, AMD Slingshot" /></a>
+</p>
+
+<br />
+
+<img src="readme/cards/h-fullstack.svg" width="100%" alt="Full stack" />
+
+<p align="center">
+  <a href="https://github.com/cyborgwastaken/arxstream"><img src="readme/cards/arxstream.svg" width="43%" alt="arxstream: two-person watch party" /></a>
+</p>
+
+<br />
 
 <p align="center"><sub>more, with full write-ups → <a href="https://ayuxcyb.fun/work"><b>ayuxcyb.fun/work</b></a></sub></p>
